@@ -24,14 +24,11 @@ ActiveRecord::Schema.define(version: 0) do
     t.string "topic"
   end
 
-  create_table "threads", force: :cascade do |t|
-    t.string  "title"
-    t.string  "subforum"
-    t.integer "thread_id"
-    t.text    "content"
+  create_table "topics", force: :cascade do |t|
+    t.string "title"
+    t.string "subforum"
+    t.text   "content"
   end
-
-  add_index "threads", ["thread_id"], name: "index_threads_on_thread_id"
 
   create_table "users", force: :cascade do |t|
     t.string  "username"

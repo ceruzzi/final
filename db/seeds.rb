@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.delete_all
-Thread.delete_all
+Topic.delete_all
 Post.delete_all
 Subforum.delete_all
 
@@ -17,12 +17,11 @@ Subforum.delete_all
   usr.age=user[:age]
   usr.save
 
-[{:thread_id=> 1, :title=> "test", :subforum=> "School", :cotent=> "Are there any questions about thursday's test"}].each do |place|
-  thd=Thread.new
-  thd.thread_id=thread[:thread_id]
-  thd.title=thread[:title]
-  thd.subforum=thread[:subforum]
-  thd.content=thread[:content]
+[{:title=> "test", :subforum=> "School", :cotent=> "Are there any questions about thursday's test"}].each do |place|
+  thd=Topic.new
+  thd.title=topic[:title]
+  thd.subforum=topic[:subforum]
+  thd.content=topic[:content]
   thd.save
 
 [{:thread=> 1, :user=> "Michael", :post_number=> 1, :content=> "Looks like there are none."}].each do |place|

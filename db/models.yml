@@ -40,10 +40,9 @@ User
   age: int
   avatar_url: string
 
-Thread
+Topic
   title: string
   subforum: string
-  thread_id: integer
   content: text
 
 Post
