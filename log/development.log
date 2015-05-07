@@ -807,3 +807,103 @@ Processing by TopicsController#show as HTML
   [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 4]]
   Rendered topics/show.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/topics/4" for ::1 at 2015-05-07 16:45:52 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"authenticity_token"=>"fUfvq0E3oYYjT/jdUmH0nlHrVNpFlVC0r9S7EtoM7vuHg5Jk5iMcee9Bg0UCFGyhqHEfIX9WMypIYnJFZkeF9w==", "id"=>"4"}
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered topics/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/4" for ::1 at 2015-05-07 16:45:54 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered topics/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/topics/4" for ::1 at 2015-05-07 16:45:55 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered topics/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/topics/4" for ::1 at 2015-05-07 16:45:58 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered topics/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/topics/4" for ::1 at 2015-05-07 16:46:05 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered topics/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-07 16:46:07 -0500
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.5ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/4" for ::1 at 2015-05-07 16:46:10 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"authenticity_token"=>"518SD7Ce18K+SkSORQwK2Xks1tKJ27fDCLEYyOBx2Zwdm2/AF4pqPXJEPxYVeZLmgLadKbMY1F3vB9GfXDqykA==", "id"=>"4"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered topics/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-07 16:46:12 -0500
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.3ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/new" for ::1 at 2015-05-07 16:46:14 -0500
+Processing by TopicsController#new as HTML
+  Rendered topics/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/topics" for ::1 at 2015-05-07 16:46:25 -0500
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dll+AH1+h7B+/b+E6OfjeBmlDb1oH2iI33MK/EMdSsuMnQPP2mo6T7LzxBy4kntH4D9GRlLcCxY4xcOr/1Yhxw==", "title"=>"test two", "subforum"=>"testing2", "content"=>"sdasd"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "topics" ("title", "subforum", "content") VALUES (?, ?, ?)  [["title", "test two"], ["subforum", "testing2"], ["content", "sdasd"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-07 16:46:25 -0500
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/topics/5" for ::1 at 2015-05-07 16:46:29 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"authenticity_token"=>"hYnMPyp8ffKvHK4ApiEXhArdggcjtpRvfR0F5ms5/Ht/TbHwjWjADWMS1Zj2VI+780fJ/Bl19/Gaq8yx13KXdw==", "id"=>"5"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered topics/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-07 16:46:32 -0500
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.2ms)
