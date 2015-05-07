@@ -4,7 +4,7 @@
 
 <h2>Add a New Topic</h2>
 
-<%=form_tag "/topics" do%>
+<%=form_tag "/topics", :method => 'post' do%>
   <p><label>Title:</label> <input name="title" size="30"></p>
   <p><label>Subforum:</label> <input name="subforum" size="30"></p>
   <p><label>Content:</label></p><textarea name="content" cols="80" rows="3"></textarea>
