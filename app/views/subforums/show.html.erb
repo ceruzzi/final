@@ -17,9 +17,8 @@
     }
 </style>
 <%= link_to "Go Back", "/"%>
-<h1><%= @subforum.title %></h1>
+<h2><%= @subforum.title %></h2>
 
-<p><%= link_to "Add a New Topic", topics_new_url %></p>
 
 <ul>
 
@@ -33,3 +32,17 @@
 <% end %>
 
 </ul>
+<br>
+<br>
+<br>
+<br>
+
+
+<h3>Add a New Topic</h3>
+
+<%=form_tag topic_url(@subforum.id), :method => 'post' do%>
+    <p><label>Title:</label> <input name="title" size="30"></p>
+    <p><label>Content:</label></p><textarea name="content" cols="80" rows="3"></textarea>
+    <p><button>Submit</button></p>
+<% end %>
+

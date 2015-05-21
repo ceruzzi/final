@@ -20,8 +20,11 @@ class TopicsController < ApplicationController
     # redirect_to topic_url(com.topic_id)
 
     top=Topic.new
-    top.subforum_id = 1
+    top.subforum_id = params["subforum_id"]
+    Rails.logger.info top.subforum_id
+    Rails.logger.info "hiiiiiiii"
     top.content=params["content"]
+    Rails.logger.info top.content
     top.title=params["title"]
     top.save
     redirect_to subforum_url(top.subforum_id)

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get '/topics' => 'topics#index'
   get '/topics/new' => 'topics#new'
-  post '/topics'=>'topics#create'
+  post '/topics/:subforum_id'=>'topics#create'
   get '/topics/:id' => 'topics#show', :as=>'topic'
   delete '/topics/:id' => 'topics#destroy'
   get '/topics/:id/edit' => 'topics#edit',:as=>'edit'
