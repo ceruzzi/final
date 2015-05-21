@@ -17,6 +17,6 @@ Rails.application.routes.draw do
   patch '/topics/:id' => 'topics#update'
 
 
-  post '/comment/:topic_id'=>'comments#create', :as=>'comments'
+  post '/comments/:topic_id'=>'comments#create', :as=>'comments'
  # get '/topics/:id/comment' => 'topics#comment'
 end

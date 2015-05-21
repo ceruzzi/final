@@ -8602,3 +8602,342 @@ Completed 200 OK in 58ms (Views: 56.1ms | ActiveRecord: 0.3ms)
   [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "topics"[0m
   [1m[35mSQL (1.2ms)[0m  DELETE FROM "comments"
   [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "subforums"[0m
+
+
+Started GET "/" for ::1 at 2015-05-21 16:49:35 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (2.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 271ms (Views: 221.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/subforums/new" for ::1 at 2015-05-21 16:49:38 -0500
+Processing by SubforumsController#new as HTML
+  Rendered subforums/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/subforums" for ::1 at 2015-05-21 16:49:44 -0500
+Processing by SubforumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LNj/t3nBkR8d6sngFIlLEY9XqttbQVscO+AmkNX0n9ipVOC6/9Y/qAI1B0OWiiTiJk/lA77uRT0vZH7JoMJ40w==", "title"=>"school"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSubforum Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "subforums" WHERE "subforums"."title" = 'school' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "subforums" ("title") VALUES (?)  [["title", "school"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 28ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-21 16:49:44 -0500
+Processing by SubforumsController#index as HTML
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+  Rendered subforums/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subforums/1" for ::1 at 2015-05-21 16:49:47 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"DbVb93MC/+N+oYFDgjmwhIYQJ6nNiF1g3TcPVKb5+LCIOUT69RVRVGF+T+AAOt93LwhocSgnQ0HJs1cN088fuw==", "id"=>"1"}
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.8ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?  [["subforum_id", 1]]
+  Rendered subforums/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 48ms (Views: 37.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/topics/1" for ::1 at 2015-05-21 16:50:04 -0500
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JOPEcL9eTrExE+cUdpia152WW4bMsU0sTMC9XPHXTbmhb9t9OUngBi7MKbf0m/UkNI4UXikeUw1YROUFhOGqsg==", "title"=>"Web Development", "content"=>"How is Web Devlopment going?\r\n", "subforum_id"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "topics" ("subforum_id", "content", "title") VALUES (?, ?, ?)  [["subforum_id", 1], ["content", "How is Web Devlopment going?\r\n"], ["title", "Web Development"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/subforums/1
+Completed 302 Found in 9ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/subforums/1" for ::1 at 2015-05-21 16:50:04 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSubforum Load (0.1ms)[0m  SELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?[0m  [["subforum_id", 1]]
+  Rendered subforums/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/1" for ::1 at 2015-05-21 16:50:06 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"authenticity_token"=>"jj2EKPhdN3f/nhXHnqbBpo5MFega5Zo4MOQKEtR7+PILsZslfkqZwOBB22Qcpa5VJ1RaMP9KhBkkYFJLoU0f+Q==", "id"=>"1"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 43ms (Views: 40.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/comment/1" for ::1 at 2015-05-21 16:50:13 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gSmBGc0zfqfkGdkmn+kPxeGQnJ+uP1G+q+Uq3b1Bob0EpZ4USyTQEPvGF4Ud6mA2SIjTR0uQT5+/YXKEyHdGtg==", "user"=>"Mike", "content"=>"Great!", "topic_id"=>"1"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)[0m  [["topic_id", 1], ["user", "Mike"], ["post_number", 0], ["content", "Great!"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/topics/1
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/topics/1" for ::1 at 2015-05-21 16:50:13 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/1/edit" for ::1 at 2015-05-21 16:50:19 -0500
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered topics/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/topics/1" for ::1 at 2015-05-21 16:50:25 -0500
+Processing by TopicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2UPAehvZCpsfrCoToIcMaBbamGlawxyjdcXE8oG5gM66RAMbnjKnXOhfgvMgXPCCUMluUDEElOZU09KvzABCA==", "title"=>"dsadsasd", "subforum"=>"dassdaads", "content"=>"adsdsaasd", "id"=>"1"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "topics" SET "title" = ?, "content" = ? WHERE "topics"."id" = ?  [["title", "dsadsasd"], ["content", "adsdsaasd"], ["id", 1]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics/1
+Completed 302 Found in 9ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/topics/1" for ::1 at 2015-05-21 16:50:25 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.4ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/1/edit" for ::1 at 2015-05-21 16:50:44 -0500
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered topics/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/topics/1" for ::1 at 2015-05-21 16:56:42 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/1/edit" for ::1 at 2015-05-21 16:56:44 -0500
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered topics/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 59ms (Views: 57.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/topics/1" for ::1 at 2015-05-21 16:57:06 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/1/edit" for ::1 at 2015-05-21 16:57:07 -0500
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered topics/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/comment/1" for ::1 at 2015-05-21 16:59:11 -0500
+
+ActionController::RoutingError (No route matches [POST] "/comment/1"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/Michael/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Michael/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Michael/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (105.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (55.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (123.7ms)
+
+
+Started GET "/topics/1" for ::1 at 2015-05-21 16:59:38 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 43ms (Views: 34.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/comments/1" for ::1 at 2015-05-21 17:00:12 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/Vs8T0/ohUze7+G+jtdhTB5FKDW6c0cUx6BtImoKg8d41yNCyf8r+8EwLx0M1A6/t11n7V/cWTXTJDV7HzxkzA==", "user"=>"Mike", "content"=>"ok", "topic_id"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)  [["topic_id", 1], ["user", "Mike"], ["post_number", 0], ["content", "ok"]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics/1
+Completed 302 Found in 7ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/topics/1" for ::1 at 2015-05-21 17:00:12 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subforums/1" for ::1 at 2015-05-21 17:00:45 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSubforum Load (0.1ms)[0m  SELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?[0m  [["subforum_id", 1]]
+  Rendered subforums/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 39ms (Views: 32.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/topics/1" for ::1 at 2015-05-21 17:00:49 -0500
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oihppMM9Oim4B2mfAkafISxppjQHGrAS6UJ4fSLCRzgnpHapRSqUnqfYpzyARfDShXHp7OK1rjP9xiAkV/SgMw==", "title"=>"fdsfsdf", "content"=>"adssadasd", "subforum_id"=>"1"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "topics" ("subforum_id", "content", "title") VALUES (?, ?, ?)[0m  [["subforum_id", 1], ["content", "adssadasd"], ["title", "fdsfsdf"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/subforums/1
+Completed 302 Found in 8ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/subforums/1" for ::1 at 2015-05-21 17:00:49 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?  [["subforum_id", 1]]
+  Rendered subforums/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/2" for ::1 at 2015-05-21 17:00:50 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"authenticity_token"=>"4D8lzfOyJZRc0zmRlOC55BWilX/pSlzUUk2hrvahOZplszrAdaWLI0MM9zIW49YXvLrapwzlQvVGyfn3g5fekQ==", "id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/comments/2" for ::1 at 2015-05-21 17:00:55 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D8Z5Opj9EPN1tGZJ8mMVINjkP0hJHkNFxav8EVCnMxuKSmY3Huq+RGprqOpwYHrTcfxwkKyxXWTRL6RIJZHUEA==", "user"=>"adsasdads", "content"=>"asddsasadasffd", "topic_id"=>"2"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)  [["topic_id", 2], ["user", "adsasdads"], ["post_number", 0], ["content", "asddsasadasffd"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics/2
+Completed 302 Found in 7ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/topics/2" for ::1 at 2015-05-21 17:00:55 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.3ms)
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "users" ADD "username" varchar
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "users" ADD "age" int[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "users" ADD "avatar_url" varchar
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "topics" ADD "title" varchar
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "topics" ADD "subforum_id" int[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_topics_on_subforum_id" ON "topics" ("subforum_id")[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "topics" ADD "content" text
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "comments" ADD "topic_id" integer
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX "index_comments_on_topic_id" ON "comments" ("topic_id")[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "comments" ADD "user" varchar
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "comments" ADD "post_number" integer[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "comments" ADD "content" text
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "subforums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "subforums" ADD "title" varchar
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+[0m
