@@ -21,10 +21,7 @@ class TopicsController < ApplicationController
 
     top=Topic.new
     top.subforum_id = params["subforum_id"]
-    Rails.logger.info top.subforum_id
-    Rails.logger.info "hiiiiiiii"
     top.content=params["content"]
-    Rails.logger.info top.content
     top.title=params["title"]
     top.save
     redirect_to subforum_url(top.subforum_id)
@@ -37,7 +34,6 @@ class TopicsController < ApplicationController
   def update
     @topic = Topic.find(params[:id])
     @topic.update title: params[:title],
-        subforum_id: params[:subforum_id],
         content: params[:content]
 
     redirect_to topic_url(@topic.id)

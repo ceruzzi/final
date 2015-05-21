@@ -7872,3 +7872,98 @@ Processing by SubforumsController#show as HTML
   [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?  [["subforum_id", 1]]
   Rendered subforums/show.html.erb within layouts/application (2.1ms)
 Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-21 15:28:02 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.3ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subforums/new" for ::1 at 2015-05-21 15:28:04 -0500
+Processing by SubforumsController#new as HTML
+  Rendered subforums/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/subforums" for ::1 at 2015-05-21 15:28:06 -0500
+Processing by SubforumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8cgpWLMsQusJ2hgHJZm9ZYoogw7isNlCBZgpfNWFw+Z0RDZVNTvsXBYF1qSnmtKWIzDM1gcfx2MRHHEloLMk7Q==", "title"=>"dsaadsads"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "subforums" ("title") VALUES (?)[0m  [["title", "dsaadsads"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-21 15:28:06 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subforums/2" for ::1 at 2015-05-21 15:28:07 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"8WDl1EJH1WjlGcGP02Yw0Y+boEkzuEvIP2TwkOxBpnt07PrZxFB73/rGDyxRZV8iJoPvkdYXVekr4KjJmXdBcA==", "id"=>"2"}
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?[0m  [["subforum_id", 2]]
+  Rendered subforums/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/topics/2" for ::1 at 2015-05-21 15:28:13 -0500
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gfyjJ/W3ZijtnIsaMNY/4wWbWkKI32gsAsYEEy/chYoEcLwqc6DIn/JDRbmy1VAQrIMVmm1wdg0WQlxKWupigQ==", "title"=>"saasasas", "content"=>"saassaass", "subforum_id"=>"2"}
+2
+hiiiiiiii
+saassaass
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "topics" ("subforum_id", "content", "title") VALUES (?, ?, ?)[0m  [["subforum_id", 2], ["content", "saassaass"], ["title", "saasasas"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/subforums/2
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/subforums/2" for ::1 at 2015-05-21 15:28:13 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?  [["subforum_id", 2]]
+  Rendered subforums/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/2" for ::1 at 2015-05-21 15:28:15 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"authenticity_token"=>"P/oFHVg6/++By65WCrL5DMNPHCvzWXqHEFikPxCdDay6dhoQ3i1RWJ4UYPWIsZb/aldT8xb2ZKYE3PxmZavqpw==", "id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/2/edit" for ::1 at 2015-05-21 15:30:17 -0500
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered topics/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 33ms (Views: 26.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/topics/2" for ::1 at 2015-05-21 15:30:28 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/2/edit" for ::1 at 2015-05-21 15:30:33 -0500
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered topics/edit.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.2ms)
