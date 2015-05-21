@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
 
-  root 'topics#index'
+  root 'subforums#index'
+
+  get '/subforums' => 'subforums#index'
+  get '/subforums/new' => 'subforums#new'
+  post '/subforums'=>'subforums#create'
+  get '/subforums/:id' => 'subforums#show', :as=>'subforum'
 
   get '/topics' => 'topics#index'
   get '/topics/new' => 'topics#new'

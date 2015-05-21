@@ -1,0 +1,35 @@
+<style>
+    h2 {
+        color: white;
+        background: #006;
+        padding: 6px;
+        text-align: center;
+    }
+    img {
+        float: left;
+        margin-right: 40px;
+        box-shadow: 8px 8px 4px gray;
+        height: "200px";
+    }
+    p {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+</style>
+<%= link_to "Go Back", "/"%>
+<h1><%= @subforum.title %></h1>
+
+<p><%= link_to "Add a New Topic", topics_new_url %></p>
+
+<ul>
+
+
+
+<% Topic.where(subforum_id: @subforum.id).each do |topic| %>
+    <li>
+        <%= link_to topic.title, topic_url(topic.id), :method=> 'get' %>
+        <%= link_to "(delete)", topic_url(topic.id), :method=> 'delete' %>
+    </li>
+<% end %>
+
+</ul>

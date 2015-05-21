@@ -16,13 +16,8 @@
         margin-bottom: 24px;
     }
 </style>
-<h1><%= @topic.subforum %></h1>
-
 <%= link_to "Go Back", "/"%>
 
-<p>
-    <%= link_to "Edit", edit_url(@topic.id) %>
-</p>
 
 <h2><%= @topic.title %></h2>
 
@@ -30,6 +25,10 @@
 <div>
 
     <p><%= @topic.content %></p>
+
+    <p>
+        <%= link_to "Edit", edit_url(@topic.id) %>
+    </p>
 
 
     <p></p>
@@ -46,7 +45,7 @@
         </div>
     <% end%>
 
-    <h3>Post:</h3>
+    <h3>Reply:</h3>
     <%=form_tag comments_url(@topic.id) do%>
         <p>User: <input type="text" name="user">
         <p>Content:<br> <textarea name="content" rows="5"cols="100"></textarea></p>

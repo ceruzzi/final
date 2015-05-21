@@ -42,7 +42,7 @@ User
 
 Topic
   title: string
-  subforum: string
+  subforum_id: int
   content: text
 
 Comment
@@ -52,7 +52,7 @@ Comment
   content: text
 
 Subforum
-  topic: string
+  title: string
 
 
 

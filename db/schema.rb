@@ -23,19 +23,21 @@ ActiveRecord::Schema.define(version: 0) do
   add_index "comments", ["topic_id"], name: "index_comments_on_topic_id"
 
   create_table "subforums", force: :cascade do |t|
-    t.string "topic"
+    t.string "title"
   end
 
   create_table "topics", force: :cascade do |t|
-    t.string "title"
-    t.string "subforum"
-    t.text   "content"
+    t.string  "title"
+    t.integer "subforum_id"
+    t.text    "content"
   end
+
+  add_index "topics", ["subforum_id"], name: "index_topics_on_subforum_id"
 
   create_table "users", force: :cascade do |t|
     t.string  "username"
     t.integer "age"
     t.string  "avatar_url"
-end
+  end
 
 end
