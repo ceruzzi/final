@@ -8471,3 +8471,134 @@ Processing by TopicsController#show as HTML
   [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?  [["topic_id", 1]]
   Rendered topics/show.html.erb within layouts/application (2.3ms)
 Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subforums/1" for ::1 at 2015-05-21 16:03:54 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubforum Load (0.1ms)[0m  [1mSELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?  [["subforum_id", 1]]
+  Rendered subforums/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 58ms (Views: 56.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "users" ADD "username" varchar
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "users" ADD "age" int[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "users" ADD "avatar_url" varchar
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "topics" ADD "title" varchar
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "topics" ADD "subforum_id" int[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_topics_on_subforum_id" ON "topics" ("subforum_id")[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "topics" ADD "content" text
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "comments" ADD "topic_id" integer
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX "index_comments_on_topic_id" ON "comments" ("topic_id")[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "comments" ADD "user" varchar
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "comments" ADD "post_number" integer[0m
+  [1m[35m (1.2ms)[0m  ALTER TABLE "comments" ADD "content" text
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "subforums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  ALTER TABLE "subforums" ADD "title" varchar
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.4ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (1.7ms)[0m  [1mDELETE FROM "topics"[0m
+  [1m[35mSQL (1.4ms)[0m  DELETE FROM "comments"
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "subforums"[0m
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "users" ADD "username" varchar
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "users" ADD "age" int[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "users" ADD "avatar_url" varchar
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "topics" ADD "title" varchar
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "topics" ADD "subforum_id" int[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX "index_topics_on_subforum_id" ON "topics" ("subforum_id")[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "topics" ADD "content" text
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "comments" ADD "topic_id" integer
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX "index_comments_on_topic_id" ON "comments" ("topic_id")[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "comments" ADD "user" varchar
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "comments" ADD "post_number" integer[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "comments" ADD "content" text
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "subforums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "subforums" ADD "title" varchar
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (3.0ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "topics"[0m
+  [1m[35mSQL (1.2ms)[0m  DELETE FROM "comments"
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "subforums"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (3.2ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "topics"[0m
+  [1m[35mSQL (1.2ms)[0m  DELETE FROM "comments"
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "subforums"[0m
