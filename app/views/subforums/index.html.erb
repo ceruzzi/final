@@ -1,0 +1,19 @@
+<style>
+  h1 {
+    border-bottom: solid 3px gray;
+    margin-bottom: 24px;
+  }
+</style>
+
+<p><%= link_to "Create a Subforum", topics_new_url %></p>
+
+<ul>
+
+  <% @subforums.each do |subforum| %>
+    <li>
+      <%= link_to topic.title, topic_url(topic.id), :method=> 'get' %>
+      <%= link_to "(delete)", topic_url(topic.id), :method=> 'delete' %>
+    </li>
+  <% end %>
+
+</ul>

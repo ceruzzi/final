@@ -6,6 +6,7 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find(params[:id])
+    #@comments=Comment.where(:post_number=>params["id"])
   end
 
   def new
@@ -26,10 +27,10 @@ class TopicsController < ApplicationController
   def update
     @topic = Topic.find(params[:id])
     @topic.update title: params[:title],
-        subforum: params[:content],
+        subforum: params[:subforum],
         content: params[:content]
 
-    redirect_to topic_url(@topic.topic_id)
+    redirect_to topic_url(@topic.id)
   end
 
   def destroy

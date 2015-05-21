@@ -45,8 +45,8 @@ Topic
   subforum: string
   content: text
 
-Post
-  thread: integer
+Comment
+  topic_id: integer
   user: string
   post_number: integer
   content: text

@@ -13,12 +13,14 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
-  create_table "posts", force: :cascade do |t|
-    t.integer "thread"
+  create_table "comments", force: :cascade do |t|
+    t.integer "topic_id"
     t.string  "user"
     t.integer "post_number"
     t.text    "content"
   end
+
+  add_index "comments", ["topic_id"], name: "index_comments_on_topic_id"
 
   create_table "subforums", force: :cascade do |t|
     t.string "topic"
@@ -34,6 +36,6 @@ ActiveRecord::Schema.define(version: 0) do
     t.string  "username"
     t.integer "age"
     t.string  "avatar_url"
-  end
+end
 
 end

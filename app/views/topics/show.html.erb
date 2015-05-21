@@ -20,6 +20,10 @@
 
 <%= link_to "Go Back", "/"%>
 
+<p>
+    <%= link_to "Edit", edit_url(@topic.id) %>
+</p>
+
 <h2><%= @topic.title %></h2>
 
 
@@ -31,3 +35,21 @@
     <p></p>
 
 
+
+
+    <% Comment.where(topic_id: @topic.id).each do |comment| %>
+        <p><hr><br><b><i>User: <%= comment.user%></i></b>
+        <br>
+        <br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp<%= comment.content %>
+        </p>
+        </div>
+    <% end%>
+
+    <h3>Post:</h3>
+    <%=form_tag comments_url(@topic.id) do%>
+        <p>User: <input type="text" name="user">
+        <p>Content:<br> <textarea name="content" rows="5"cols="100"></textarea></p>
+        <p><input type="submit" value="Send"></p>
+    </form>
+    <% end%>

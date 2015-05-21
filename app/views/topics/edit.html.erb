@@ -5,9 +5,9 @@
 <h2>Edit a Topic</h2>
 
 <%=form_tag topic_url(@topic.id),:method=>'patch' do%>
-  <p><label>Title:</label> <input value="<%= @topic.title %>" name="title" size="30"></p>
-  <p><label>Subforum:</label> <input value="<%= @topic.subforum %>" name="url" size="30"></p>
-  <p><label>Content:</label></p>
-  <textarea name="desc" cols="80" rows="3"><%= @topic.desc %></textarea>
-  <p><button>Submit</button></p>
-<%end%>
+    <p><label>Title:</label> <input name="title" size="30"></p>
+    <p><label>Subforum:</label> <input name="subforum" size="30"></p>
+    <p><label>Content:</label></p><textarea name="content" cols="80" rows="3"></textarea>
+    <p><button>Submit</button></p>
+<% end %>
+

@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   delete '/topics/:id' => 'topics#destroy'
   get '/topics/:id/edit' => 'topics#edit',:as=>'edit'
   patch '/topics/:id' => 'topics#update'
+
+
+  post '/comment/:topic_id'=>'comments#create', :as=>'comments'
+ # get '/topics/:id/comment' => 'topics#comment'
 end
