@@ -19,4 +19,11 @@ Rails.application.routes.draw do
 
   post '/comments/:topic_id'=>'comments#create', :as=>'comments'
  # get '/topics/:id/comment' => 'topics#comment'
+
+  get '/signup'=> 'users#new'
+  post '/users'=> 'users#create'
+  get '/users/:id'=> 'users#show', as: :user
+
+  get '/login'=> 'sessions#new'
+  post '/sessions'=> 'sessions#create'
 end

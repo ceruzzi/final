@@ -8941,3 +8941,2116 @@ Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.3ms)
             FROM sqlite_temp_master
             WHERE name='index_topics_on_subforum_id' AND type='index'
 [0m
+
+
+Started GET "/" for ::1 at 2015-05-24 16:58:52 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (4.6ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 732ms (Views: 515.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-24 16:59:04 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:5:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:5:in `new'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (94.1ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (278.4ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-24 16:59:04 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:5:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:5:in `new'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (64.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (139.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-24 17:31:47 -0500
+Processing by SubforumsController#index as HTML
+  [1m[35mSubforum Load (0.3ms)[0m  SELECT "subforums".* FROM "subforums"
+  Rendered subforums/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 56ms (Views: 54.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-24 17:33:31 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.1ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 64ms (Views: 62.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for ::1 at 2015-05-24 17:33:50 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-24 17:33:53 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:5:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:5:in `new'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (62.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (141.5ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-24 17:33:54 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:5:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:5:in `new'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (87.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (182.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-24 17:44:24 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (2.9ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 363ms (Views: 284.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-24 17:44:26 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:5:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:5:in `new'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (56.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (129.7ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-24 17:44:26 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:5:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:5:in `new'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (53.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (121.6ms)
+
+
+Started POST "/console/repl_sessions/3aa84d9a517853025b09652e51fc4d61/trace" for ::1 at 2015-05-24 17:44:32 -0500
+
+
+Started GET "/" for ::1 at 2015-05-24 17:49:30 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (2.7ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 272ms (Views: 222.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-24 17:49:32 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 66ms (Views: 57.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-05-24 17:49:38 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZfeJntli4ok3QocDkwobHsUUBb+FuxXZ+WwlgTd+rsTge5aTX3VMPiidSaARCXTtbAxKZ2AUC/jt6H3YQkhJzw==", "username"=>"Michael", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `password_digest' for #<User:0x007fe188f0ed28>):
+  app/controllers/users_controller.rb:21:in `create'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (61.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (144.1ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-24 17:49:51 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-05-24 17:49:59 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/hs047R2gPGb04LblH+ZWX5ezI6zso5FmcVJFOIWrfZ7lyvuMmEuRoQMTHgWfPaq10aDVlYdkGSNQRFNlyBK/Q==", "username"=>"Mike", "password"=>"[FILTERED]", "commit"=>"submit"}
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `password_digest=' for #<User:0x007fe188600128>):
+  app/controllers/users_controller.rb:20:in `create'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (55.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (122.6ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-24 17:50:07 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-05-24 17:50:08 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Klr7HtisqYUH4hFb9iuWSuwrMLFHBRjCsMJi8liYgdlJXTh/XUcEQvARubt28GqgqjjGiCzCkIeR1HSvFSFDA==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `password_digest' for #<User:0x007fe18a9fb4b0>):
+  app/controllers/users_controller.rb:21:in `create'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (59.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (133.4ms)
+
+
+Started POST "/users" for ::1 at 2015-05-24 18:02:44 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Klr7HtisqYUH4hFb9iuWSuwrMLFHBRjCsMJi8liYgdlJXTh/XUcEQvARubt28GqgqjjGiCzCkIeR1HSvFSFDA==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `password_digest' for #<User:0x007fe1880ebc28>):
+  app/controllers/users_controller.rb:21:in `create'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (55.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (124.3ms)
+  [1m[36m (1.5ms)[0m  [1mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TEMPORARY TABLE "atopics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "subforum_id" integer, "content" text) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "tindex_atopics_on_subforum_id" ON "atopics" ("subforum_id")
+  [1m[36m (0.3ms)[0m  [1mSELECT * FROM "topics"[0m
+  [1m[35m (0.9ms)[0m  DROP TABLE "topics"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "subforum_id" int, "content" text) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_atopics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_atopics_on_subforum_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_topics_on_subforum_id" ON "topics" ("subforum_id")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "atopics"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "atopics"[0m
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "ausers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "age" integer, "avatar_url" varchar, "password_digest" varchar) 
+  [1m[36m (0.4ms)[0m  [1mSELECT * FROM "users"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "users"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "avatar_url" varchar, "password_digest" varchar) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "ausers"
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "ausers"[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "ausers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "avatar_url" varchar, "password_digest" varchar) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "users"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "users"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "ausers"
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "ausers"[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TEMPORARY TABLE "atopics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "subforum_id" integer, "content" text) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "tindex_atopics_on_subforum_id" ON "atopics" ("subforum_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "topics"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "topics"[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "subforum_id" int, "content" text) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_atopics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_atopics_on_subforum_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_topics_on_subforum_id" ON "topics" ("subforum_id")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "atopics"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "atopics"
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+[0m
+
+
+Started GET "/" for ::1 at 2015-05-24 18:03:42 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (1.6ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 258ms (Views: 217.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-24 18:03:45 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 45ms (Views: 36.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for ::1 at 2015-05-24 18:03:48 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"69PSJfMpOReorAMCYjTU569UOOO/e+qKVHnCl/wALaNuX80odT6XoLdzzaHgN7sUBkx3O1rU9KtA/ZrOiTbKqA==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 102ms (Views: 29.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-05-24 18:03:58 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6Wag9X4WfJ8jsr8Lc26VGYCQgdo7wc7OL8ljBVIIQrJs6r/4+AHSKDxtcajxbfrqKYjOAt5u0O87TTtcJz6luQ==", "username"=>"mike", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 40ms (Views: 32.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2015-05-24 18:04:04 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XifjHMFmvbyJqUA52r+SSLlXbIEktMeiT7J/AqKyF9fbq/wRR3ETC5Z2jppYvP27EE8jWcEb2YNbNidb14Tw3A==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("password_digest") VALUES (?)  [["password_digest", "$2a$10$zbQnb..iZF95fHP/tMidgeUN2WWmQFGDs3IpHJa9CEeZADu06TH1q"]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 83ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2015-05-24 18:04:04 -0500
+Processing by SubforumsController#index as HTML
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+  Rendered subforums/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-24 18:04:08 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-05-24 18:04:11 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IVxCUg0G9wPRHL5WddL5Bxq8AlAiC3N3t+aoCz7gOoKk0F1fixFZtM7DcPX30Zb0s6RNiMekbVajYvBSS9bdiQ==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 110ms (Views: 29.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-05-24 18:04:17 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GPMOoq02U2VdC5V0avjA/Y2rUCFNl9WtRug+aYgjyB+dfxGvKyH90kLUW9fo+68OJLMf+ag4y4xSbGYw/RUvFA==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 107ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2015-05-24 18:04:20 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mzEyJJcir3pCf5ZKIa+0ChadYC5M7tv/SSRWM+w15rgevS0pETUBzV2gWOmjrNv5v4Uv9qlBxd5doA5qmQMBsw==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 142ms (Views: 40.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2015-05-24 18:04:23 -0500
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/Michael/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Michael/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Michael/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (27.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (138.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (58.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (131.7ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-24 18:04:27 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-05-24 18:04:32 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y+bYPrtMN+cowqlhe/44bOCpTXTK52DkVgftS3FeJOPmasczPVuZUDcdZ8L5/VefSbECrC9IfsVCg7USBGjD6A==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 132ms (Views: 46.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2015-05-24 18:04:53 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xabtXgDrOKag6YixLbSlplubDJLPfJ/WuuND6WdAgxVAKvJThvyWEb82RhKvt8pV8oNDSirTgfeuZxuwEnZkHg==", "username"=>"mike", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 46ms (Views: 39.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-05-24 18:04:59 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VttLLdvJwV96dK+x86z7eqOLppL9sDib4l4rSf/7Tg7TV1QgXd5v6GWrYRJxr5SJCpPpShgfJrr22nMQis2pBQ==", "username"=>"mik", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 47ms (Views: 40.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-05-24 18:05:06 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OlvBmPf4jpWO270iPNavsURjyFga9MxdeXw296awMb2/196Vce8gIpEEc4G+1cBC7XuHgP9b0nxt+G6u04bWtg==", "username"=>"mik", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 122ms (Views: 41.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2015-05-24 18:05:15 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9C/4qxK1Rho2glpSG8Vz5MM62LmciIA32Yp+mACVjeNxo+emlKLorSldlPGZxhwXaiKXYXknnhbNDibBdaNq6A==", "username"=>"maksdsda", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 114ms (Views: 28.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2015-05-24 18:05:30 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 36ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-24 18:05:34 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ov2BMvnClHJdhLw1X+HHpFPbVHS/u/BfmGjlvL+eSaQncZ4/f9U6xUJbcpbd4qhX+sMbrFoU7n6M7L3lyqiurw==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", ""]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 32ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-24 18:05:34 -0500
+Processing by SubforumsController#index as HTML
+  [1m[35mSubforum Load (0.1ms)[0m  SELECT "subforums".* FROM "subforums"
+  Rendered subforums/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/subforums/new" for ::1 at 2015-05-24 18:05:38 -0500
+Processing by SubforumsController#new as HTML
+  Rendered subforums/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-05-24 18:05:46 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-24 18:05:48 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aXzmeMw1RY6KBOv9ZSywAvSYb/3rp5lpAKbjE6JqbHjs8Pl1SiLrOZXbJV7nL9/xXYAgJQ4Ih0gUIrtK11yLcw==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", ""]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-24 18:05:48 -0500
+Processing by SubforumsController#index as HTML
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+  Rendered subforums/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 45ms (Views: 44.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2015-05-24 18:05:50 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-24 18:05:53 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iqpYk3WfLhSn1ANRjc6C2dZnxBWGWZOrC1l2RXKG3HEPJkee84iAo7gLzfIPze0qf3+LzWP2jYof3S4cB7A7eg==", "username"=>"DASDSASAD", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "DASDSASAD"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-24 18:05:53 -0500
+Processing by SubforumsController#index as HTML
+  [1m[35mSubforum Load (0.1ms)[0m  SELECT "subforums".* FROM "subforums"
+  Rendered subforums/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "users" ADD "username" varchar
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "topics" ADD "title" varchar[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "topics" ADD "subforum_id" int
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX "index_topics_on_subforum_id" ON "topics" ("subforum_id")
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "topics" ADD "content" text[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "comments" ADD "topic_id" integer[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX "index_comments_on_topic_id" ON "comments" ("topic_id")
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "comments" ADD "user" varchar[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "comments" ADD "post_number" integer
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "comments" ADD "content" text[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "subforums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "subforums" ADD "title" varchar[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2015-05-24 18:12:11 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (1.6ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 283ms (Views: 241.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-24 18:12:18 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 47ms (Views: 37.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-05-24 18:12:24 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bwN/iHSZQtfdGCpaKhgQulDJgP6KDmqElp0PJiBtfdnqj2CF8o7sYMLH5PmoG39J+dHPJm+hdKWCGVd/VVua0g==", "username"=>"E", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 68ms (Views: 37.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2015-05-24 18:12:51 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"05iTU90YxWjONAuLxZgN5pTJhUA82v9EdFcVfQfmn1FWFIxeWw9r39HrxShHm2IVPdHKmNl14WVg000kctB4Wg==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("password_digest") VALUES (?)[0m  [["password_digest", "$2a$10$sM1SP1oHz0Ua/x2bTu8DAe/qRgvKZhOKJzYadLHcPUMyy/olWSyVS"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 80ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-24 18:12:51 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2015-05-24 18:12:54 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-24 18:12:58 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ThdKk8cRP5PWW0cAvZHOPaTvwmEISbjQzhjpw53a1UvLm1WeQQaRJMmEiaM/kqHODfeNue3mpvHanLGa6OwyQA==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", ""]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-24 18:12:58 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.1ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for ::1 at 2015-05-24 18:13:00 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-24 18:13:03 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A78Qia4XcTPCLRaJLnzg2wZAZ8NV4+H3NH//dzGgd6uGMw+EKADfhN3y2Cqsf48or1goG7BM/9Yg+6cuRJaQoA==", "username"=>"SDASD", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "SDASD"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-24 18:13:03 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.1ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-24 18:13:05 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 36ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-05-24 18:13:09 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/jbB08a481ThQORq7ZWDbfeQllkcKqDbycqHb9wbInR7ut7eQK9d4/6fKslvluyeXojZgfmFvvrdTt82qS3Ffw==", "username"=>"SDDSASD", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 113ms (Views: 35.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-24 18:15:02 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 45ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-05-24 18:15:08 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xwU4cRFqz76hu9btfPAiojpnfh7EotMtW8R9/oHd6glCiSd8l31hCb5kGE7+801Rk38xxiENzQxPQCWn9OsNAg==", "username"=>"DSSAD", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 125ms (Views: 45.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2015-05-25 11:07:44 -0500
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/Michael/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Michael/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Michael/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (37.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (226.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (68.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (170.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 11:07:58 -0500
+Processing by SubforumsController#index as HTML
+  [1m[35mSubforum Load (1.5ms)[0m  SELECT "subforums".* FROM "subforums"
+  Rendered subforums/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 69ms (Views: 63.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-25 11:08:00 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-05-25 11:08:03 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y+WsTbSVH92x3CdRz8+K3C9QfEnU6+7SjwRfvcBhp27mabNAMoKxaq4D6fJNzOUvhkgzkTFE8PObgAfktVdAZQ==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 47ms (Views: 37.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2015-05-25 11:08:04 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H3qFtik63iJhzyYCSiIXVAgZ4rK9CXxyHjkS0bKTF2Ca9pq7ry1wlX4Q6KHIIXinoQGtalimYlMKvUqIx6Xwaw==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 52ms (Views: 45.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2015-05-25 11:08:10 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dz5xKAn2Mb8NfXpZuYu0Gx/t0UcChp5UOqT+Z3zMEWLysm4lj+GfCBKitPo7iNvotvWen+cpgHUuIKY+Cfr2aQ==", "username"=>"dasdsa", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 121ms (Views: 38.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2015-05-25 11:08:14 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eAdOVZpck7xF2D1k9tqjQ4v+d2lBCxKKXWs1xLz3u9r9i1FYHEs9C1oH88d02cywIuY4saSkDKtJ722dycFc0Q==", "username"=>"sdaasd", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 112ms (Views: 30.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2015-05-25 11:09:01 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qX7rIeHjNu0TnzcD2tSn6qXAWem4eZ8tkBVYmDEk8yMs8vQsZ/SYWgxA+aBY18gZDNgWMV3WgQyEkQDBRBIUKA==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 33.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-25 11:09:17 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 11:43:36 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (3.6ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 555ms (Views: 356.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/login" for ::1 at 2015-05-25 11:49:16 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-25 11:49:19 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6phA6003GckuLaPwREnPlMGGyDi4+YsKO6arQcpxOGdvFF/myyC3fjHybVPGSqBnaJ6H4F1WlSsvIvMYv0ffbA==", "username"=>"dssd", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "dssd"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 40ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 11:49:20 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.1ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for ::1 at 2015-05-25 11:49:22 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-25 11:49:26 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3DYCfKDxEIYol7b1fbWvCIyiIrc5SOzGRZdmH4Sy9+JZuh1xJua+MTdIeFb/tsD7Jbptb9zn8udREz5G8YQQ6Q==", "username"=>"sdasdaasd", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "sdasdaasd"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 11:49:26 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 28ms (Views: 27.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 12:17:27 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (2.5ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 72ms (Views: 21.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/login" for ::1 at 2015-05-25 12:17:35 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-25 12:17:37 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SN1jaH9UpPO0VluUDdIjkcqHeT4L/vQQfTmKKQ0ZoirNUXxl+UMKRKuJlTeP0UxiY5825u5R6jFpvdJweC9FIQ==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", ""]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 29ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 12:17:37 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.1ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-25 12:17:41 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 34ms (Views: 29.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2015-05-25 12:17:43 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7ot7MxqLjg8nfq5VONlEFV12cgyKkGZ7jIFi4In+5sFrB2Q+nJwguDihYPa62ivm9G491G8/eFqYBTq5/MgByg==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 69ms (Views: 5.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2015-05-25 12:17:51 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DBeIOaepyR1RcY22FVtnHthOshmVI0CwhoFv49mM0teJm5c0Ib5nqk6uQxWXWAjtcVb9wXCMXpGSBTe6rLo13A==", "username"=>"asd", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 6.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2015-05-25 12:19:49 -0500
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/Michael/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Michael/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Michael/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (110.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (63.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (143.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 12:19:53 -0500
+Processing by SubforumsController#index as HTML
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+  Rendered subforums/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 257ms (Views: 256.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2015-05-25 12:19:59 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-25 12:20:01 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3vcUfPkj1gB9td1ijQh3pBPFTgZrWyi8TEUZWyuH/SJbewtxfzR4t2JqE8EPCxhXut0B3o70Np1YwUECXrEaKQ==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", ""]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 12:20:01 -0500
+Processing by SubforumsController#index as HTML
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+  Rendered subforums/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2015-05-25 12:20:04 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-25 12:20:07 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"08cKfiVURK8KODeSDY0iqTxUYNoo95iFoeqLXdibVpVWSxVzo0PqGBXn+TGPjk1alUwvAs1YhqS1btMEra2xng==", "username"=>"dssda", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "dssda"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 12:20:07 -0500
+Processing by SubforumsController#index as HTML
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+  Rendered subforums/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 12:26:26 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (3.0ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 326ms (Views: 268.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-25 12:33:55 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 64ms (Views: 55.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-05-25 12:34:00 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bJbjIj0/F4sQxawpgVQwnY/h+vLV//xeqJE6YurBfU3pGvwvuyi5PA8aYooDV19uJvm1KjBQ4n+8FWI7n/eaRg==", "username"=>"hhhh", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 177ms (Views: 30.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-05-25 12:45:01 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zcwtTwqZa3RirFQ0JT4DVn97VMZ1WZ0QiGGMaFiFbXdIQDJCjI7Fw31zmpenPWyl1mMbHpD2gzGc5dQxLbOKfA==", "username"=>"mike", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'mike' LIMIT 1
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "users" ("username", "password_digest") VALUES (?, ?)[0m  [["username", "mike"], ["password_digest", "$2a$10$LjvPmaRvDg7QyCLdnmEL8ulaq8m9yhHLKsG3vY8CFLBfUAlRb937i"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 94ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 12:45:02 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2015-05-25 12:45:04 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-25 12:45:10 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qlYpzFXtDBELsScFyvcnveNqiKeAvgsJ48sLDkrDzu4v2jbB0/qiphRu6aZI9EhOSnLHf2URFSj3T1NXP/Up5Q==", "username"=>"mikkkk", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "mikkkk"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 25ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 12:45:10 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.1ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 27.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup" for ::1 at 2015-05-25 12:45:11 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 65ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-05-25 12:45:17 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bE46xmmCZYp51SYyUWAAK0q+EnGU9kC0HBeM7LurpNDpwiXL75XLPWYK6JHTY2/Y46ZdqXFZXpUIk9S1zp1D2w==", "username"=>"mikkk", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'mikkk' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest") VALUES (?, ?)  [["username", "mikkk"], ["password_digest", "$2a$10$wFuq7kvmSYvdwUQnqChMru56Hchyizkq6h5/y5dx.ABILgLpIpCjy"]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 82ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 12:45:17 -0500
+Processing by SubforumsController#index as HTML
+  [1m[35mSubforum Load (0.1ms)[0m  SELECT "subforums".* FROM "subforums"
+  Rendered subforums/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for ::1 at 2015-05-25 12:45:18 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-25 12:45:23 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DS6AAhTO09OjjGh3yS/IAYeh8UF50cWEBJFZj7Zem7CIop8Pktl9ZLxTptRLLKfyLrm+mZx+26UQFQHWw2h8uw==", "username"=>"mikkk", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "mikkk"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 78ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 12:45:23 -0500
+Processing by SubforumsController#index as HTML
+  [1m[35mSubforum Load (0.1ms)[0m  SELECT "subforums".* FROM "subforums"
+  Rendered subforums/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 32ms (Views: 31.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for ::1 at 2015-05-25 12:53:22 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 46ms (Views: 45.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-25 12:53:26 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xPaBxOW9vtb+XSZ/GYflAKaBk22h0v9f00V7LzbTtYdBep7JY6oQYeGC6NybhIrzD5nctUR94X7HwSN2Q+VSjA==", "username"=>"nh", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nh"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 12:53:26 -0500
+Processing by SubforumsController#index as HTML
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+  Rendered subforums/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2015-05-25 12:53:28 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-25 12:53:36 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ekoZujINxHIBnbfOc5I441B4hEKIgdG6k+yhtzIfbbH/xga3tBpqxR5CeW3xkVcQ+WDLmm0uz5uHaPnuRymKug==", "username"=>"mikkk", "password"=>"[FILTERED]", "commit"=>"submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "mikkk"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 76ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 12:53:36 -0500
+Processing by SubforumsController#index as HTML
+  [1m[35mSubforum Load (0.1ms)[0m  SELECT "subforums".* FROM "subforums"
+  Rendered subforums/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 12:53:45 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 13:50:31 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (2.4ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (12.1ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 500 Internal Server Error in 330ms (ActiveRecord: 4.0ms)
+
+ActionView::Template::Error (undefined method `name' for #<User:0x007fccb75c6da0>):
+    10: 
+    11: <div class = "pull-right">
+    12:     <% if session["user_id"].present?%>
+    13:         Hi, <%= User.find_by(id: session["user_id"]).name %>
+    14:         <%= link_to "My Account", user_path(User.find_by(id: session["user_id"])) %>
+    15:         <%= link_to "Sign Out", '/logout'%>
+    16:             <%else%>
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___1480521448809982580_70258581424920'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (79.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (66.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (193.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 13:50:34 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.1ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `name' for #<User:0x007fccb3c08820>):
+    10: 
+    11: <div class = "pull-right">
+    12:     <% if session["user_id"].present?%>
+    13:         Hi, <%= User.find_by(id: session["user_id"]).name %>
+    14:         <%= link_to "My Account", user_path(User.find_by(id: session["user_id"])) %>
+    15:         <%= link_to "Sign Out", '/logout'%>
+    16:             <%else%>
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___1480521448809982580_70258581424920'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (109.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (61.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (150.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 13:57:43 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.1ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `name' for #<User:0x007fccb3be8fc0>):
+    10: 
+    11: <div class = "pull-right">
+    12:     <% if session["user_id"].present?%>
+    13:         Hi, <%= User.find_by(id: session["user_id"]).name %>
+    14:         <%= link_to "My Account", user_path(User.find_by(id: session["user_id"])) %>
+    15:         <%= link_to "Sign Out", '/logout'%>
+    16:             <%else%>
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___1480521448809982580_70258581424920'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (80.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (59.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (133.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 13:58:10 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.3ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (2.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/3" for ::1 at 2015-05-25 13:58:13 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/3" for ::1 at 2015-05-25 13:58:16 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/3" for ::1 at 2015-05-25 13:58:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 42ms (Views: 39.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 14:09:41 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.4ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/3" for ::1 at 2015-05-25 14:09:43 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/3" for ::1 at 2015-05-25 14:10:04 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `length' for nil:NilClass):
+    1: <h2><%= @user.username %></h2>
+    2: <p>
+    3:     <strong>Username:</strong> <%= @user.username %>
+    4:     <strong>Password:</strong> <%= @user.password.length %>
+    5: </p>
+  app/views/users/show.html.erb:4:in `_app_views_users_show_html_erb___4230100373472166345_70258631476560'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (82.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (60.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (135.5ms)
+
+
+Started GET "/users/3" for ::1 at 2015-05-25 14:10:12 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `length' for nil:NilClass):
+    1: <h2><%= @user.username %></h2>
+    2: <p>
+    3:     <strong>Username:</strong> <%= @user.username %>
+    4:     <strong>Password:</strong> <%= @user.password.length() %>
+    5: </p>
+  app/views/users/show.html.erb:4:in `_app_views_users_show_html_erb___4230100373472166345_70258618282040'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (60.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (135.5ms)
+
+
+Started GET "/users/3" for ::1 at 2015-05-25 14:10:21 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/3" for ::1 at 2015-05-25 14:38:12 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 90ms (Views: 76.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 14:38:17 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.3ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 140ms (Views: 137.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/logout" for ::1 at 2015-05-25 14:38:24 -0500
+
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/Michael/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Michael/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Michael/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (49.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (166.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (59.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (134.4ms)
+
+
+Started GET "/logout" for ::1 at 2015-05-25 14:38:24 -0500
+
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/Michael/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Michael/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Michael/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (94.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (59.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (136.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 14:43:45 -0500
+Processing by SubforumsController#index as HTML
+  [1m[35mSubforum Load (0.6ms)[0m  SELECT "subforums".* FROM "subforums"
+  Rendered subforums/index.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 58ms (Views: 56.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/3" for ::1 at 2015-05-25 14:43:50 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 14:43:56 -0500
+Processing by SubforumsController#index as HTML
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+  Rendered subforums/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  ALTER TABLE "users" ADD "username" varchar
+  [1m[36m (1.3ms)[0m  [1mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) 
+  [1m[36m (1.7ms)[0m  [1mALTER TABLE "topics" ADD "title" varchar[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "topics" ADD "subforum_id" int
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  CREATE  INDEX "index_topics_on_subforum_id" ON "topics" ("subforum_id")
+  [1m[36m (1.4ms)[0m  [1mALTER TABLE "topics" ADD "content" text[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "comments" ADD "topic_id" integer[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX "index_comments_on_topic_id" ON "comments" ("topic_id")
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "comments" ADD "user" varchar[0m
+  [1m[35m (1.7ms)[0m  ALTER TABLE "comments" ADD "post_number" integer
+  [1m[36m (1.6ms)[0m  [1mALTER TABLE "comments" ADD "content" text[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "subforums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "subforums" ADD "title" varchar[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2015-05-25 14:44:47 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (2.5ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (15.0ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 500 Internal Server Error in 371ms (ActiveRecord: 3.7ms)
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    10: 
+    11: <div class = "pull-right">
+    12:     <% if session["user_id"].present?%>
+    13:         Hi, <%= User.find_by(id: session["user_id"]).username %>
+    14:         <%= link_to "My Account", user_path(User.find_by(id: session["user_id"])) %>
+    15:         <%= link_to "Sign Out", '/logout'%>
+    16:             <%else%>
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__4029861679031176039_70236508632740'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (82.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (78.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (169.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 14:45:23 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    10: 
+    11: <div class = "pull-right">
+    12:     <% if session["user_id"].present?%>
+    13:         Hi, <%= User.find_by(id: session["user_id"]).username %>
+    14:         <%= link_to "My Account", user_path(User.find_by(id: session["user_id"])) %>
+    15:         <%= link_to "Sign Out", '/logout'%>
+    16:             <%else%>
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__4029861679031176039_70236508632740'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.1ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (92.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (73.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (158.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-25 15:27:04 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (3.8ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (25.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 500 Internal Server Error in 693ms (ActiveRecord: 6.4ms)
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    10: 
+    11: <div class = "pull-right">
+    12:     <% if session["user_id"].present?%>
+    13:         Hi, <%= User.find_by(id: session["user_id"]).username %>
+    14:         <%= link_to "My Account", user_path(User.find_by(id: session["user_id"])) %>
+    15:         <%= link_to "Sign Out", '/logout'%>
+    16:             <%else%>
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___1701799574174019969_70212140269740'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (89.1ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (73.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (213.6ms)
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "users" ADD "username" varchar
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mALTER TABLE "topics" ADD "title" varchar[0m
+  [1m[35m (1.7ms)[0m  ALTER TABLE "topics" ADD "subforum_id" int
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  CREATE  INDEX "index_topics_on_subforum_id" ON "topics" ("subforum_id")
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "topics" ADD "content" text[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "comments" ADD "topic_id" integer[0m
+  [1m[35m (1.2ms)[0m  CREATE  INDEX "index_comments_on_topic_id" ON "comments" ("topic_id")
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "comments" ADD "user" varchar[0m
+  [1m[35m (1.5ms)[0m  ALTER TABLE "comments" ADD "post_number" integer
+  [1m[36m (1.5ms)[0m  [1mALTER TABLE "comments" ADD "content" text[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "subforums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mALTER TABLE "subforums" ADD "title" varchar[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2015-05-25 15:28:14 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (2.5ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (11.9ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 500 Internal Server Error in 348ms (ActiveRecord: 3.4ms)
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    10: 
+    11: <div class = "pull-right">
+    12:     <% if session["user_id"].present?%>
+    13:         Hi, <%= User.find_by(id: session["user_id"]).username %>
+    14:         <%= link_to "My Account", user_path(User.find_by(id: session["user_id"])) %>
+    15:         <%= link_to "Sign Out", '/logout'%>
+    16:             <%else%>
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__4351755601786635393_70281664398700'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (80.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (172.5ms)
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  ALTER TABLE "users" ADD "username" varchar
+  [1m[36m (1.3ms)[0m  [1mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "topics" ADD "title" varchar[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "topics" ADD "subforum_id" int
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX "index_topics_on_subforum_id" ON "topics" ("subforum_id")
+  [1m[36m (1.7ms)[0m  [1mALTER TABLE "topics" ADD "content" text[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "comments" ADD "topic_id" integer[0m
+  [1m[35m (1.2ms)[0m  CREATE  INDEX "index_comments_on_topic_id" ON "comments" ("topic_id")
+  [1m[36m (1.3ms)[0m  [1mALTER TABLE "comments" ADD "user" varchar[0m
+  [1m[35m (1.4ms)[0m  ALTER TABLE "comments" ADD "post_number" integer
+  [1m[36m (1.4ms)[0m  [1mALTER TABLE "comments" ADD "content" text[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "subforums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "subforums" ADD "title" varchar[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2015-05-25 15:30:27 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (2.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (12.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 500 Internal Server Error in 346ms (ActiveRecord: 3.0ms)
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    10: 
+    11: <div class="pull-right">
+    12:     <% if session["user_id"].present? %>
+    13:         Hi, <%= User.find_by(id: session["user_id"]).username %>
+    14:         <%= link_to "My Account", user_path(User.find_by(id: session["user_id"])) %>
+    15:         <%= link_to "Sign Out", '/logout'%>
+    16:             <%else%>
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___4088135686447375372_70148986657760'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.2ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (62.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (141.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.6ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (1.8ms)[0m  [1mDELETE FROM "topics"[0m
+  [1m[35mSQL (1.3ms)[0m  DELETE FROM "comments"
+  [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "subforums"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.5ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (1.7ms)[0m  [1mDELETE FROM "topics"[0m
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "comments"
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "subforums"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (2.8ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "topics"[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "comments"
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "subforums"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Michael' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest") VALUES (?, ?)  [["username", "Michael"], ["password_digest", "$2a$10$BRB1EmCmbWWPimkjRS4He.E7Hnp9RkSbQEUOLf06da1d42hjmRgNe"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)[0m  [["topic_id", 1], ["user", "Michael"], ["post_number", 1], ["content", "Looks like there are none."]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.7ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "topics"[0m
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "comments"
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "subforums"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Michael' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest") VALUES (?, ?)  [["username", "Michael"], ["password_digest", "$2a$10$rvEinBOsso3VlT8T.xf71eWmWbpXIBQNS9NhGFcouagSVuRcgA5ai"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)[0m  [["topic_id", 1], ["user", "Michael"], ["post_number", 1], ["content", "Looks like there are none."]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (2.8ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "topics"[0m
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "comments"
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "subforums"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Michael' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest") VALUES (?, ?)  [["username", "Michael"], ["password_digest", "$2a$10$gE7wn/sYggFNtQ.i/cn00ud/AEBZH3Vrxa7nUlzwfjGc/6cT6lvzO"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)[0m  [["topic_id", 1], ["user", "Michael"], ["post_number", 1], ["content", "Looks like there are none."]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (3.4ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "topics"[0m
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "comments"
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "subforums"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Michael' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest") VALUES (?, ?)  [["username", "Michael"], ["password_digest", "$2a$10$vclDUPO9.tkGZr3wb6AZLO6G.ZYJVdW/LJ/pzSvKtM8oPQHqrBTF6"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)[0m  [["topic_id", 1], ["user", "Michael"], ["post_number", 1], ["content", "Looks like there are none."]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSubforum Exists (0.1ms)[0m  SELECT  1 AS one FROM "subforums" WHERE "subforums"."title" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+
+
+Started GET "/" for ::1 at 2015-05-25 16:28:10 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (1.5ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (9.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 500 Internal Server Error in 286ms (ActiveRecord: 2.0ms)
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    10: 
+    11: <div class = "pull-right">
+    12:     <% if session["user_id"].present?%>
+    13:         Hi, <%= User.find_by(id: session["user_id"]).username %>
+    14:         <%= link_to "My Account", user_path(User.find_by(id: session["user_id"])) %>
+    15:         <%= link_to "Sign Out", '/logout'%>
+    16:             <%else%>
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__2690015779606144231_70347079411900'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (64.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (139.5ms)

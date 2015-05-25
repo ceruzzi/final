@@ -37,8 +37,9 @@
 
 User
   username: string
-  age: int
-  avatar_url: string
+  password_digest: string
+#  age: int
+#  avatar_url: string
 
 Topic
   title: string

@@ -10,22 +10,23 @@ Topic.delete_all
 Comment.delete_all
 Subforum.delete_all
 
-[{:username=> "Michael", :avata_url=> "http://www.wangdicholingresort.com/gifs/ura-village-in-bumthang.jpg", :age=> 24}].each do |usr|
+[{:username=> "Michael", :password=>"michael"}].each do |user|
   usr=User.new
   usr.username=user[:username]
-  usr.avatar_url=user[:avatar_url]
-  usr.age=user[:age]
+  usr.password=user[:password]
+  #usr.avatar_url=user[:avatar_url]
+ #usr.age=user[:age]
   usr.save
 end
 
-[{:title=> "test", :subforum_id=> 1, :cotent=> "Are there any questions about thursday's test"}].each do |thd|
+[{:title=> "test", :subforum_id=> 1, :cotent=> "Are there any questions about thursday's test"}].each do |topic|
   thd=Topic.new
   thd.title=topic[:title]
   thd.subforum_id=topic[:subforum_id]
   thd.content=topic[:content]
   thd.save
 end
-[{:topic_id=> 1, :user=> "Michael", :post_number=> 1, :content=> "Looks like there are none."}].each do |pst|
+[{:topic_id=> 1, :user=> "Michael", :post_number=> 1, :content=> "Looks like there are none."}].each do |post|
   pst=Comment.new
   pst.topic_id=post[:topic_id]
   pst.user=post[:user]
@@ -34,9 +35,9 @@ end
   pst.save
 end
 
-[{:topic=> "school"},{:title=> "sports"} ].each do |sub|
+[{:title=> "sports"}].each do |subforum|
     sub=Subforum.new
-    sub.topic=sub[:thread]
+    sub.title=subforum[:thread]
     sub.save
 
 

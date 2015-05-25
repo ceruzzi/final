@@ -4,9 +4,9 @@
     margin-bottom: 24px;
   }
 </style>
-
+<% if session[:user_id].present? %>
 <p><%= link_to "Add a New Topic", topics_new_url %></p>
-
+<%end%>
 <ul>
 
   <% @topics.each do |topic| %>

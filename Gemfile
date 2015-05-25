@@ -45,5 +45,8 @@ group :development, :test do
   gem 'ez'
 
   gem 'quiet_assets'
+
+  gem 'bcrypt'
+
 end
 

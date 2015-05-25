@@ -8,6 +8,26 @@
 </head>
 <body>
 
+<div class = "pull-right">
+    <% if session["user_id"].present?%>
+        Hi, <%= User.find_by(id: session["user_id"]).username %>
+        <%= link_to "My Account", user_path(User.find_by(id: session["user_id"])) %>
+        <%= link_to "Sign Out", '/logout'%>
+            <%else%>
+    <%= link_to "Sign Up", '/signup' %>
+        <%=link_to "Sign In", '/login'%>
+        <% end%>
+
+</div>
+
+<%if notice.present?%>
+<div class="alert alert-info"%>
+    <%=notice%>
+    </div>
+    <%end%>
+
+
+
 <%= yield %>
 
 </body>

@@ -4,9 +4,9 @@
     margin-bottom: 24px;
   }
 </style>
-
+<% if session[:user_id].present? %>
 <p><%= link_to "Create a Subforum", subforums_new_url %></p>
-
+<%end%>
 <ul>
 
   <% @subforums.each do |subforum| %>
