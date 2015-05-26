@@ -43,6 +43,7 @@ User
 
 Topic
   title: string
+  user: string
   subforum_id: int
   content: text
 

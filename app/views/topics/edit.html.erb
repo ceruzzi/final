@@ -2,7 +2,7 @@
   label { width: 100px; vertical-align: middle;}
 </style>
 
-<h2>Edit a Topic</h2>
+<h2>Edit your Topic</h2>
 
 <%=form_tag topic_url(@topic.id),:method=>'patch' do%>
     <p><label>Title:</label> <input name="title" size="30" value="<%=@topic.title%>"></p>

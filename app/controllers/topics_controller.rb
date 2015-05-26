@@ -23,6 +23,7 @@ class TopicsController < ApplicationController
     top.subforum_id = params["subforum_id"]
     top.content=params["content"]
     top.title=params["title"]
+    top.user=User.find_by(id: session["user_id"]).username
     top.save
     redirect_to subforum_url(top.subforum_id)
   end

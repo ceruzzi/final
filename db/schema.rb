@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 0) do
 
   create_table "topics", force: :cascade do |t|
     t.string  "title"
+    t.string  "user"
     t.integer "subforum_id"
     t.text    "content"
   end

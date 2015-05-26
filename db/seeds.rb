@@ -10,35 +10,9 @@ Topic.delete_all
 Comment.delete_all
 Subforum.delete_all
 
-[{:username=> "Michael", :password=>"michael"}].each do |user|
-  usr=User.new
-  usr.username=user[:username]
-  usr.password=user[:password]
-  #usr.avatar_url=user[:avatar_url]
- #usr.age=user[:age]
-  usr.save
-end
+User.create username: 'Michael', password: 'michael'
+User.create username: 'WSFan', password: 'michael'
+Subforum.create title: 'Sports'
+Topic.create subforum_id: 1, title: 'White Sox', user: 'Michael', content: 'Why on earth did we start Noesi tonight?'
+Comment.create topic_id: 1, user:'WSFan', post_number: 1, content: 'He is terrible'
 
-[{:title=> "test", :subforum_id=> 1, :cotent=> "Are there any questions about thursday's test"}].each do |topic|
-  thd=Topic.new
-  thd.title=topic[:title]
-  thd.subforum_id=topic[:subforum_id]
-  thd.content=topic[:content]
-  thd.save
-end
-[{:topic_id=> 1, :user=> "Michael", :post_number=> 1, :content=> "Looks like there are none."}].each do |post|
-  pst=Comment.new
-  pst.topic_id=post[:topic_id]
-  pst.user=post[:user]
-  pst.post_number=post[:post_number]
-  pst.content=post[:content]
-  pst.save
-end
-
-[{:title=> "sports"}].each do |subforum|
-    sub=Subforum.new
-    sub.title=subforum[:thread]
-    sub.save
-
-
-end

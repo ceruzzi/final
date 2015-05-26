@@ -23,11 +23,19 @@
 
 
 <div>
-
-    <p><%= @topic.content %></p>
+    <p><hr><br><b><i>User: <%= @topic.user%></i></b>
+    <br>
+    <br>
+    &nbsp&nbsp&nbsp&nbsp&nbsp<%= @topic.content %>
+    </p>
 
     <p>
+        <% if session["user_id"].present?%>
+            <%if User.find_by(id: session["user_id"]).username == @topic.user%>
         <%= link_to "Edit", edit_url(@topic.id) %>
+                <% end %>
+        <% end %>
+
     </p>
 
 
@@ -41,14 +49,21 @@
         <br>
         <br>
         &nbsp&nbsp&nbsp&nbsp&nbsp<%= comment.content %>
+        <p><% if session["user_id"].present?%>
+            <%if User.find_by(id: session["user_id"]).username == comment.user%>
+                <%= link_to "Edit", edit_comment_url(comment.id) %>
+                    </p>
+            <% end %>
+        <% end %>
         </p>
         </div>
     <% end%>
-
+    <% if session["user_id"].present?%>
     <h3>Reply:</h3>
     <%=form_tag comments_url(@topic.id) do%>
-        <p>User: <input type="text" name="user">
         <p>Content:<br> <textarea name="content" rows="5"cols="100"></textarea></p>
         <p><input type="submit" value="Send"></p>
     </form>
     <% end%>
+    <% end%>
+

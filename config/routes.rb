@@ -18,7 +18,8 @@ Rails.application.routes.draw do
 
 
   post '/comments/:topic_id'=>'comments#create', :as=>'comments'
- # get '/topics/:id/comment' => 'topics#comment'
+  get '/comments/:id/edit' => 'comments#edit',:as=>'edit_comment'
+  patch '/comments/:id' => 'comments#update'
 
   get '/signup'=> 'users#new'
   post '/users'=> 'users#create'
@@ -26,4 +27,5 @@ Rails.application.routes.draw do
 
   get '/login'=> 'sessions#new'
   post '/sessions'=> 'sessions#create'
+  get '/logout'=> 'sessions#destroy'
 end
