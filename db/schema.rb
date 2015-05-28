@@ -26,6 +26,10 @@ ActiveRecord::Schema.define(version: 0) do
     t.string "title"
   end
 
+  create_table "tags", force: :cascade do |t|
+    t.string "title"
+  end
+
   create_table "topics", force: :cascade do |t|
     t.string  "title"
     t.string  "user"

@@ -21,6 +21,9 @@ Rails.application.routes.draw do
   get '/comments/:id/edit' => 'comments#edit',:as=>'edit_comment'
   patch '/comments/:id' => 'comments#update'
 
+  get '/tags' => 'tags#index'
+  get '/tags/:id' => 'tags#show', :as=>'tag'
+
   get '/signup'=> 'users#new'
   post '/users'=> 'users#create'
   get '/users/:id'=> 'users#show', as: :user

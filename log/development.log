@@ -15009,3 +15009,737 @@ Processing by SubforumsController#show as HTML
   [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?  [["subforum_id", 1]]
   Rendered subforums/show.html.erb within layouts/application (1.4ms)
 Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-28 09:00:02 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (10.3ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 381ms (Views: 334.2ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-28 09:00:07 -0500
+Processing by SubforumsController#index as HTML
+  [1m[35mSubforum Load (0.4ms)[0m  SELECT "subforums".* FROM "subforums"
+  Rendered subforums/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 174ms (Views: 173.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2015-05-28 09:00:08 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 126ms (Views: 124.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-28 09:00:15 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (8.3ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 299ms (Views: 284.5ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/subforums/1" for ::1 at 2015-05-28 09:00:23 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"r0buqTsKT5DZ4hRXGRU3W7ayanHagKdDQAdksgt1jvbwdtXWJVeXYod8X14s7bkBVrOtW8cmyOGLgxc4z2R/lg==", "id"=>"1"}
+  [1m[35mSubforum Load (4.6ms)[0m  SELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (1.8ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?[0m  [["subforum_id", 1]]
+  Rendered subforums/show.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 440ms (Views: 400.9ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-28 09:02:21 -0500
+Processing by SubforumsController#index as HTML
+  [1m[35mSubforum Load (8.0ms)[0m  SELECT "subforums".* FROM "subforums"
+  Rendered subforums/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 304ms (Views: 284.8ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-28 09:04:00 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (1.5ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 368ms (Views: 354.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-28 09:05:57 -0500
+Processing by SubforumsController#index as HTML
+  [1m[35mSubforum Load (8.1ms)[0m  SELECT "subforums".* FROM "subforums"
+  Rendered subforums/index.html.erb within layouts/application (46.7ms)
+Completed 200 OK in 657ms (Views: 643.8ms | ActiveRecord: 8.1ms)
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (2.0ms)[0m  ALTER TABLE "users" ADD "username" varchar
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "topics" ADD "title" varchar[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "topics" ADD "user" varchar
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "topics" ADD "subforum_id" int[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_topics_on_subforum_id" ON "topics" ("subforum_id")[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "topics" ADD "content" text
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "comments" ADD "topic_id" integer
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_comments_on_topic_id" ON "comments" ("topic_id")[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "comments" ADD "user" varchar
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "comments" ADD "post_number" integer[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "comments" ADD "content" text
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "subforums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "subforums" ADD "title" varchar
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "tags" ADD "title" varchar
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.7ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (1.3ms)[0m  [1mDELETE FROM "topics"[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "comments"
+  [1m[36mSQL (1.2ms)[0m  [1mDELETE FROM "subforums"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Michael' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest") VALUES (?, ?)  [["username", "Michael"], ["password_digest", "$2a$10$DxAC99QWX/EmkQipwEIgGO5YX7OsPUJVJ2pVV/B3v/Twp7bFen9yK"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'WSFan' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest") VALUES (?, ?)  [["username", "WSFan"], ["password_digest", "$2a$10$RAHbBAFZ5HJffO14w7sWY.k8zVhfdptE8JDiMbyE4XA0ojqrKrt1O"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSubforum Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "subforums" WHERE "subforums"."title" = 'Sports' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "subforums" ("title") VALUES (?)  [["title", "Sports"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "topics" ("subforum_id", "title", "user", "content") VALUES (?, ?, ?, ?)[0m  [["subforum_id", 1], ["title", "White Sox"], ["user", "Michael"], ["content", "Why on earth did we start Noesi tonight?"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)  [["topic_id", 1], ["user", "WSFan"], ["post_number", 1], ["content", "He is terrible"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  ALTER TABLE "users" ADD "username" varchar
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "topics" ADD "title" varchar[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "topics" ADD "user" varchar
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "topics" ADD "subforum_id" int[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.5ms)[0m  [1mCREATE  INDEX "index_topics_on_subforum_id" ON "topics" ("subforum_id")[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "topics" ADD "content" text
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "comments" ADD "topic_id" integer
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_comments_on_topic_id" ON "comments" ("topic_id")[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "comments" ADD "user" varchar
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "comments" ADD "post_number" integer[0m
+  [1m[35m (1.6ms)[0m  ALTER TABLE "comments" ADD "content" text
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "subforums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "subforums" ADD "title" varchar
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "tags" ADD "title" varchar
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (2.8ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "topics"[0m
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "comments"
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "subforums"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Michael' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest") VALUES (?, ?)  [["username", "Michael"], ["password_digest", "$2a$10$SU0NmjRkjP6Q/pp03oguIOG.zVJvSoXpjmAf4nxqaCY/ngfL4KAOy"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'WSFan' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password_digest") VALUES (?, ?)  [["username", "WSFan"], ["password_digest", "$2a$10$viu1taRORtS/C8lzZ7vCOOnV/1RF7/37p15LdK9Re2fZMC3cgnFAG"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSubforum Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "subforums" WHERE "subforums"."title" = 'Sports' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "subforums" ("title") VALUES (?)  [["title", "Sports"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "topics" ("subforum_id", "title", "user", "content") VALUES (?, ?, ?, ?)[0m  [["subforum_id", 1], ["title", "White Sox"], ["user", "Michael"], ["content", "Why on earth did we start Noesi tonight?"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)  [["topic_id", 1], ["user", "WSFan"], ["post_number", 1], ["content", "He is terrible"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "users" ADD "username" varchar
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "topics" ADD "title" varchar[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "topics" ADD "user" varchar
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "topics" ADD "subforum_id" int[0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_topics_on_subforum_id" ON "topics" ("subforum_id")[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "topics" ADD "content" text
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "comments" ADD "topic_id" integer
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX "index_comments_on_topic_id" ON "comments" ("topic_id")[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "comments" ADD "user" varchar
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "comments" ADD "post_number" integer[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "comments" ADD "content" text
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "subforums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  ALTER TABLE "subforums" ADD "title" varchar
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  ALTER TABLE "tags" ADD "title" varchar
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+[0m
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  ALTER TABLE "users" ADD "username" varchar
+  [1m[36m (1.6ms)[0m  [1mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) 
+  [1m[36m (1.7ms)[0m  [1mALTER TABLE "topics" ADD "title" varchar[0m
+  [1m[35m (1.3ms)[0m  ALTER TABLE "topics" ADD "user" varchar
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "topics" ADD "subforum_id" int[0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (2.1ms)[0m  [1mCREATE  INDEX "index_topics_on_subforum_id" ON "topics" ("subforum_id")[0m
+  [1m[35m (2.1ms)[0m  ALTER TABLE "topics" ADD "content" text
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "comments" ADD "topic_id" integer
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_comments_on_topic_id" ON "comments" ("topic_id")[0m
+  [1m[35m (1.4ms)[0m  ALTER TABLE "comments" ADD "user" varchar
+  [1m[36m (1.7ms)[0m  [1mALTER TABLE "comments" ADD "post_number" integer[0m
+  [1m[35m (2.7ms)[0m  ALTER TABLE "comments" ADD "content" text
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "subforums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  ALTER TABLE "subforums" ADD "title" varchar
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "tags" ADD "title" varchar
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+
+  [1m[36m (2.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (2.3ms)[0m  [1mDELETE FROM "topics"[0m
+  [1m[35mSQL (1.2ms)[0m  DELETE FROM "comments"
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "subforums"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Michael' LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("username", "password_digest") VALUES (?, ?)  [["username", "Michael"], ["password_digest", "$2a$10$L31jo8VUQ.SeD8/HcRWMEu4BckDz5bMtw8lY/XvsGONEdtIdOiYLi"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'WSFan' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_digest") VALUES (?, ?)  [["username", "WSFan"], ["password_digest", "$2a$10$2Y2cefwdNijbcJBSEbxHP.EGaOHmbtWSCsUhghR.TqXJIVu6/GC32"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSubforum Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "subforums" WHERE "subforums"."title" = 'On The Field' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "subforums" ("title") VALUES (?)  [["title", "On The Field"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSubforum Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "subforums" WHERE "subforums"."title" = 'Trade Rumors, Prospect Talk, Etc.' LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "subforums" ("title") VALUES (?)  [["title", "Trade Rumors, Prospect Talk, Etc."]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSubforum Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "subforums" WHERE "subforums"."title" = 'White Sox History' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "subforums" ("title") VALUES (?)  [["title", "White Sox History"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSubforum Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "subforums" WHERE "subforums"."title" = 'Other Teams' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "subforums" ("title") VALUES (?)  [["title", "Other Teams"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSubforum Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "subforums" WHERE "subforums"."title" = 'Off Topic' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "subforums" ("title") VALUES (?)  [["title", "Off Topic"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "topics" ("subforum_id", "title", "user", "content") VALUES (?, ?, ?, ?)[0m  [["subforum_id", 1], ["title", "Tonights game"], ["user", "Michael"], ["content", "Why on earth did we start Noesi tonight?"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)  [["topic_id", 1], ["user", "WSFan"], ["post_number", 1], ["content", "He is terrible"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "topics" ("subforum_id", "title", "user", "content") VALUES (?, ?, ?, ?)[0m  [["subforum_id", 1], ["title", "Tyler Flowers"], ["user", "Michael"], ["content", "He is terrible"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)  [["topic_id", 2], ["user", "WSFan"], ["post_number", 1], ["content", "So is Soto"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)[0m  [["topic_id", 2], ["user", "Michael"], ["post_number", 2], ["content", "This team needs a new catcher"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("subforum_id", "title", "user", "content") VALUES (?, ?, ?, ?)  [["subforum_id", 2], ["title", "Micah Johnson performing well in AAA"], ["user", "Michael"], ["content", "He will be a solid 2nd baseman someday"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)[0m  [["topic_id", 3], ["user", "WSFan"], ["post_number", 1], ["content", "He needs a bit more time to develop his defense"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("subforum_id", "title", "user", "content") VALUES (?, ?, ?, ?)  [["subforum_id", 3], ["title", "Who was the best White Sox player of all time?"], ["user", "Michael"], ["content", "Was it Frank Thomas?"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)[0m  [["topic_id", 4], ["user", "WSFan"], ["post_number", 1], ["content", "It was Eddie Collins"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("subforum_id", "title", "user", "content") VALUES (?, ?, ?, ?)  [["subforum_id", 4], ["title", "Bryce Harper"], ["user", "Michael"], ["content", "Is pretty good at this baseball thing."]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)[0m  [["topic_id", 5], ["user", "WSFan"], ["post_number", 1], ["content", "You dont say"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "topics" ("subforum_id", "title", "user", "content") VALUES (?, ?, ?, ?)  [["subforum_id", 5], ["title", "Giordanos or Lou Malnatis?"], ["user", "Michael"], ["content", "I say Giordanos"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)[0m  [["topic_id", 6], ["user", "WSFan"], ["post_number", 1], ["content", "Lou Malnatis"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+
+
+Started GET "/" for ::1 at 2015-05-28 15:03:38 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (1.5ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 413ms (Views: 374.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/subforums/1" for ::1 at 2015-05-28 15:03:54 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"h9ZWjYIfqzsEY1S6IS6kPYxDwlLjwm5v+1M8TQDNbyXY5m3ynEJzyVr9H7MU1ipnbEIFeP5kAc0w10/HxNyeRQ==", "id"=>"1"}
+  [1m[35mSubforum Load (0.6ms)[0m  SELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?[0m  [["subforum_id", 1]]
+  Rendered subforums/show.html.erb within layouts/application (20.3ms)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    10: 
+    11: <div class = "pull-right">
+    12:     <h1><%= link_to "White Sox Forum", "/" %>
+    13:    <% @subforums.each do |subforum| %>
+    14:             <small>  <%= link_to subforum.title, subforum_url(subforum.id), :method=> 'get' %></small>
+    15:            <% end %></h1>
+    16:     <% if session["user_id"].present?%>
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___1290965870106665964_70348905767060'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (80.6ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (64.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (190.2ms)
+
+
+Started GET "/subforums/2" for ::1 at 2015-05-28 15:04:12 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"h9ZWjYIfqzsEY1S6IS6kPYxDwlLjwm5v+1M8TQDNbyXY5m3ynEJzyVr9H7MU1ipnbEIFeP5kAc0w10/HxNyeRQ==", "id"=>"2"}
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?[0m  [["subforum_id", 2]]
+  Rendered subforums/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    10: 
+    11: <div class = "pull-right">
+    12:     <h1><%= link_to "White Sox Forum", "/" %>
+    13:    <% @subforums.each do |subforum| %>
+    14:             <small>  <%= link_to subforum.title, subforum_url(subforum.id), :method=> 'get' %></small>
+    15:            <% end %></h1>
+    16:     <% if session["user_id"].present?%>
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___1290965870106665964_70348905767060'
+
+
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.0ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (53.1ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Michael/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (119.2ms)
+
+
+Started GET "/subforums/2" for ::1 at 2015-05-28 15:24:20 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSubforum Load (0.7ms)[0m  SELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?[0m  [["subforum_id", 2]]
+  Rendered subforums/show.html.erb within layouts/application (11.8ms)
+  [1m[35mSubforum Load (0.3ms)[0m  SELECT "subforums".* FROM "subforums"
+Completed 200 OK in 102ms (Views: 92.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-28 15:24:24 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (8.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "subforums".* FROM "subforums"
+Completed 200 OK in 86ms (Views: 85.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subforums/1" for ::1 at 2015-05-28 15:24:27 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"nivjwE3muV0tPgRJSPVxWARwm6MRPfQqTToj3m5QHrLBG9i/U7thr3OgT0B9Df8C5HFciQybm4iGvlBUqkHv0g==", "id"=>"1"}
+  [1m[36mSubforum Load (0.3ms)[0m  [1mSELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?  [["subforum_id", 1]]
+  Rendered subforums/show.html.erb within layouts/application (1.7ms)
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+Completed 200 OK in 60ms (Views: 56.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/subforums/2" for ::1 at 2015-05-28 15:24:32 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"035u4zOSp34Rrq3n/dNqpiC2SDeXKD4CALo70ncZ/dOMTlWcLc9/jE8w5u7IK+T8wLePHYqOUaDLPkhYswgMsw==", "id"=>"2"}
+  [1m[35mSubforum Load (0.4ms)[0m  SELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?[0m  [["subforum_id", 2]]
+  Rendered subforums/show.html.erb within layouts/application (1.4ms)
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subforums/1" for ::1 at 2015-05-28 15:24:36 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"JTnv0HnXnvZrYE0ajrt7MbTHCqbFXdAnDra+vFh0xlt6CdSvZ4pGBDX+BhO7Q/VrVMbNjNj7v4XFMs02nGU3Ow==", "id"=>"1"}
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?  [["subforum_id", 1]]
+  Rendered subforums/show.html.erb within layouts/application (1.6ms)
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subforums/3" for ::1 at 2015-05-28 15:24:37 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"GgymNfleSeBaggjtTrAtFtYvGE+QEdxUuoOflkjiCJBFPJ1K5wOREgQcQ+R7SKNMNi7fZY23s/ZxB+wcjPP58A==", "id"=>"3"}
+  [1m[35mSubforum Load (0.4ms)[0m  SELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?[0m  [["subforum_id", 3]]
+  Rendered subforums/show.html.erb within layouts/application (1.6ms)
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subforums/4" for ::1 at 2015-05-28 15:24:39 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"cY5DGEpXZ5ApvTVThSeruNJQ/9cG1riXV7x1Imr6iXAuvnhnVAq/Yncjflqw3yXiMlE4/Rtw1zWcOAaorut4EA==", "id"=>"4"}
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTopic Load (0.3ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?  [["subforum_id", 4]]
+  Rendered subforums/show.html.erb within layouts/application (4.2ms)
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+Completed 200 OK in 100ms (Views: 93.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subforums/5" for ::1 at 2015-05-28 15:24:41 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"QnHrR45gYOUO9SnY7hjXSwejtBvon4zD4zvl4gFFYuodQdA4kD24F1BrYtHb4FkR56JzMfU542Eov5ZoxVSTig==", "id"=>"5"}
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?[0m  [["subforum_id", 5]]
+  Rendered subforums/show.html.erb within layouts/application (1.4ms)
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/6" for ::1 at 2015-05-28 15:24:44 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"authenticity_token"=>"qIDq1rkKU8tuQ0GlHQgl69vxp+RXW/ed0ZVKcNBpOXr3sNGpp1eLOTDdCqwo8KuxO/Bgzkr9mD8aETn6FHjIGg==", "id"=>"6"}
+  [1m[36mTopic Load (0.7ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?  [["topic_id", 6]]
+  Rendered topics/show.html.erb within layouts/application (12.2ms)
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+Completed 200 OK in 51ms (Views: 47.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/subforums/1" for ::1 at 2015-05-28 15:25:02 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"ep6erWSwtPHwzxHQiBr8BthL6Yx9KC58pfbgnMmK+1ElrqXSeu1sA65RWtm94nJcOEoupmCOQd5ucpMWDZsKMQ==", "id"=>"1"}
+  [1m[35mSubforum Load (0.1ms)[0m  SELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?[0m  [["subforum_id", 1]]
+  Rendered subforums/show.html.erb within layouts/application (2.4ms)
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-28 15:25:03 -0500
+Processing by SubforumsController#index as HTML
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+  Rendered subforums/index.html.erb within layouts/application (1.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "subforums".* FROM "subforums"
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subforums/1" for ::1 at 2015-05-28 15:25:08 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"urI3d3YpcbmlcB71fJeTQBQqiGai7k8p9xG98UsnPwrlggwIaHSpS/vuVfxJbx0a9CtPTL9IIIs8lc57jzbOag==", "id"=>"1"}
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.3ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?  [["subforum_id", 1]]
+  Rendered subforums/show.html.erb within layouts/application (1.8ms)
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+Completed 200 OK in 46ms (Views: 43.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/subforums/2" for ::1 at 2015-05-28 15:25:09 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"G8Xt0LT5MzqtQOI9aJKJuFyCV2NLhuyXaRkbKrhYiXxE9davqqTryPPeqTRdagfivIOQSVYggzWinWigfEl4HA==", "id"=>"2"}
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?[0m  [["subforum_id", 2]]
+  Rendered subforums/show.html.erb within layouts/application (1.6ms)
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/3" for ::1 at 2015-05-28 15:25:12 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"authenticity_token"=>"lGUS1MrTjgHJYM8rdQysKjQWeS9w9z1n4Q8VIa5nsBvLVSmr1I5W85f+hCJA9CJw1Be+BW1RUsUqi2aranZBew==", "id"=>"3"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?  [["topic_id", 3]]
+  Rendered topics/show.html.erb within layouts/application (1.7ms)
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/subforums/1" for ::1 at 2015-05-28 15:25:17 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"BCPPH7zHH9AiY+G5YBhVgFWZvgypPWT7GqpmIs2I4zFbE/RgoprHInz9qrBV4NvatZh5JrSbC1nRLhWoCZkSUQ==", "id"=>"1"}
+  [1m[35mSubforum Load (0.1ms)[0m  SELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?[0m  [["subforum_id", 1]]
+  Rendered subforums/show.html.erb within layouts/application (2.6ms)
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics/1" for ::1 at 2015-05-28 15:25:18 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"authenticity_token"=>"ouGqxxeOp57IacvPS7+7WIQ4YhKwcS8CvTvfgDr3SKb90ZG4CdN/bJb3gMZ+RzUCZDmlOK3XQKB2v6wK/ua5xg==", "id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (1.4ms)
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subforums/1" for ::1 at 2015-05-28 15:25:21 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"RPLTm+jWV+Shqk68pGvIjT9C/MmOgm50CN7sOoFJEawbwujk9ouPFv80BbWRk0bX30M745MkAdbDWp+wRVjgzA==", "id"=>"1"}
+  [1m[35mSubforum Load (0.1ms)[0m  SELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?[0m  [["subforum_id", 1]]
+  Rendered subforums/show.html.erb within layouts/application (1.8ms)
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/2" for ::1 at 2015-05-28 15:25:22 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"authenticity_token"=>"x05AE366o9Ebha+7FZnWTxWjy77s2KjBOZlWWdrjKpOYfntsYOd7I0Ub5LIgYVgV9aIMlPF+x2PyHSXTHvLb8w==", "id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (2.0ms)
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics/2" for ::1 at 2015-05-28 15:32:15 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (1.3ms)
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subforums/4" for ::1 at 2015-05-28 15:32:21 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"NQlynYQ1oE7Okb9gRxTfwjmVinEmvd8M0wlC+VnftYxqOUnimmh4vJAP9Gly7FGY2ZRNWzsbsK4YjTFznc5E7A==", "id"=>"4"}
+  [1m[36mSubforum Load (0.3ms)[0m  [1mSELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?  [["subforum_id", 4]]
+  Rendered subforums/show.html.erb within layouts/application (1.5ms)
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics/5" for ::1 at 2015-05-28 15:32:23 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"authenticity_token"=>"BrqoOd/xW1vlzruFHsMArHOvHBIKVMaWeVWmOZpp0DRZipNGwayDqbtQ8IwrO472k67bOBfyqTSy0dWzXnghVA==", "id"=>"5"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 5]]
+  Rendered topics/show.html.erb within layouts/application (1.2ms)
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subforums/3" for ::1 at 2015-05-28 15:32:27 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"rwWbt74tfEeMXDx7CIwjFlq5YAh8uB/f72viSWLw9DPwNaDIoHCktdLCd3I9dK1MurinImEecH0k75HDpuEFUw==", "id"=>"3"}
+  [1m[36mSubforum Load (0.1ms)[0m  [1mSELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTopic Load (0.3ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?  [["subforum_id", 3]]
+  Rendered subforums/show.html.erb within layouts/application (1.9ms)
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics/4" for ::1 at 2015-05-28 15:32:28 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"authenticity_token"=>"e/Txyn17RxUeUGv8qBhqJpf2FF/Zi8PNARM1uL08eYUkxMq1Yyaf50DOIPWd4OR8d/fTdcQtrG/Kl0YyeS2I5Q==", "id"=>"4"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 4]]
+  Rendered topics/show.html.erb within layouts/application (1.5ms)
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subforums/5" for ::1 at 2015-05-28 15:32:31 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"Xdu7Ym8b5NDtYzWgnJNM3pjXnz+eWFIMOanMnX5Gz5kC64AdcUY8IrP9fqmpa8KEeNZYFYP+Pa7yLb8Xulc++Q==", "id"=>"5"}
+  [1m[36mSubforum Load (0.1ms)[0m  [1mSELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?  [["subforum_id", 5]]
+  Rendered subforums/show.html.erb within layouts/application (1.5ms)
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/6" for ::1 at 2015-05-28 15:32:33 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"authenticity_token"=>"0zgummxxdOIPWuBeL+n+E86mlS42N6fqoYE63qZ40e6MCBXlciysEFHEq1caEXBJLqdSBCuRyEhqBUlUYmkgjg==", "id"=>"6"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 6]]
+  Rendered topics/show.html.erb within layouts/application (1.1ms)
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subforums/1" for ::1 at 2015-05-28 15:32:35 -0500
+Processing by SubforumsController#show as HTML
+  Parameters: {"authenticity_token"=>"QvhmD59PJWxzk/h60kEBDWvfFZAD25T8GZUiPKHpPJYdyF1wgRL9ni0Ns3PnuY9Xi97Suh59+17SEVG2ZfjN9g==", "id"=>"1"}
+  [1m[36mSubforum Load (0.3ms)[0m  [1mSELECT  "subforums".* FROM "subforums" WHERE "subforums"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.3ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."subforum_id" = ?  [["subforum_id", 1]]
+  Rendered subforums/show.html.erb within layouts/application (2.8ms)
+  [1m[36mSubforum Load (0.2ms)[0m  [1mSELECT "subforums".* FROM "subforums"[0m
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/topics/2" for ::1 at 2015-05-28 15:32:36 -0500
+Processing by TopicsController#show as HTML
+  Parameters: {"authenticity_token"=>"LETbEFAAube5JNf3RBeqPpUhMiSMrzO90ESrsoZb0H5zdOBvTl1hRee6nP5x7yRkdSD1DpEJXB8bwNg4QkohHg==", "id"=>"2"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (2.2ms)
+  [1m[35mSubforum Load (0.2ms)[0m  SELECT "subforums".* FROM "subforums"
+Completed 200 OK in 44ms (Views: 41.6ms | ActiveRecord: 0.7ms)
