@@ -45,6 +45,8 @@ group :development, :test do
   gem 'quiet_assets'
 
   gem 'bcrypt'
+
+  gem 'sqlite3'
 end
 
 
