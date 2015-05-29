@@ -1,4 +1,8 @@
-<%= link_to "Go Back", subforum_url(@topic.subforum_id)%>
+<% if Subforum.exists?(@topic.subforum_id)%>
+    <%= link_to "Go Back", subforum_url(@topic.subforum_id)%>
+    <%else%>
+    <%= link_to "Go Back", topic_index_url%>
+<%end%>
 
 
 <h2><%= @topic.title %></h2>
@@ -47,7 +51,7 @@
     <% end%>
 
         <h3>Tag this thread:</h3>
-        <%=form_tag connectors_url(@topic.id) do%>
+        <%=form_tag tag_url(@topic.id) do%>
             <p><label>Tag:</label> <input name="title" size="30"></p>
             <p><button>Submit</button></p>
         <% end %>

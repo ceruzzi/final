@@ -30,6 +30,7 @@ class SubforumsController < ApplicationController
 
   def destroy
     Subforum.delete(params[:id])
+
     redirect_to root_path
   end
 

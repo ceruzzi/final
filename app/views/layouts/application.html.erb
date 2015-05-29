@@ -12,7 +12,9 @@
     <h1><%= link_to "White Sox Forum", "/" %>
    <% Subforum.all.limit(20).each do |subforum| %>
             <small>  <%= link_to subforum.title, subforum_url(subforum.id), :method=> 'get' %></small>
-           <% end %></h1>
+           <% end %>
+        <small>  <%= link_to "Tags", tag_index_url, :method=> 'get' %></small>
+    </h1>
     <% if session["user_id"].present?%>
         Hi, <%= User.find_by(id: session["user_id"]).username %>
         <%= link_to "My Account", user_path(User.find_by(id: session["user_id"])) %>
@@ -25,10 +27,10 @@
 </div>
 
 <%if notice.present?%>
-<div class="alert alert-info"%>
+<div class="alert alert-info">
     <%=notice%>
     </div>
-    <%end%>
+<%end%>
 
 
 

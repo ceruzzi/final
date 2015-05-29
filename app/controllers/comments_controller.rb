@@ -16,8 +16,8 @@ class CommentsController < ApplicationController
   end
 
   def update
-   @comment = Comment.find(params[:id])
-   @comment.update content: params[:content]
+    @comment = Comment.find(params[:id])
+    @comment.update content: params[:content]
 
     redirect_to topic_url(@comment.topic_id)
   end

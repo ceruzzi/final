@@ -7,8 +7,11 @@ Rails.application.routes.draw do
   get '/subforums/new' => 'subforums#new'
   post '/subforums'=>'subforums#create'
   get '/subforums/:id' => 'subforums#show', :as=>'subforum'
+  get '/subforums/:id/edit' => 'subforums#edit',:as=>'edit_subforum'
+  patch '/subforums/:id' => 'subforums#update'
+  delete '/subforums/:id' => 'subforums#destroy'
 
-  get '/topics' => 'topics#index'
+  get '/topics' => 'topics#index', :as=>'topic_index'
   get '/topics/new' => 'topics#new'
   post '/topics/:subforum_id'=>'topics#create'
   get '/topics/:id' => 'topics#show', :as=>'topic'
@@ -20,8 +23,9 @@ Rails.application.routes.draw do
   get '/comments/:id/edit' => 'comments#edit',:as=>'edit_comment'
   patch '/comments/:id' => 'comments#update'
 
-  get '/tags' => 'tags#index'
+  get '/tags' => 'tags#index', :as=>'tag_index'
   get '/tags/:id' => 'tags#show', :as=>'tag'
+  post '/tags/:topic_id'=>'tags#create'
 
   get '/signup'=> 'users#new'
   post '/users'=> 'users#create'
@@ -31,6 +35,4 @@ Rails.application.routes.draw do
   post '/sessions'=> 'sessions#create'
   get '/logout'=> 'sessions#destroy'
 
-  get '/connectors/new' => 'connectors#new'
-  post '/connectors/:topic_id'=>'connectors#create', :as=> 'connectors'
 end

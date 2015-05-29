@@ -1,6 +1,14 @@
 <%= link_to "Go Back", "/"%>
 <h2><%= @subforum.title %></h2>
 
+<p>
+    <% if session["user_id"].present?%>
+        <%if User.find_by(id: session["user_id"]).username == "Admin"%>
+            <%= link_to "Edit", edit_subforum_url(@subforum.id) %>
+        <%end%>
+    <%end%>
+</p>
+
 
 <ul>
 
@@ -11,9 +19,9 @@
         <%= link_to topic.title, topic_url(topic.id), :method=> 'get' %>
         <% if session["user_id"].present?%>
             <%if User.find_by(id: session["user_id"]).username == topic.user%>
-        <%= link_to "(delete)", topic_url(topic.id), :method=> 'delete' %>
-                <%end%>
+                <%= link_to "(delete)", topic_url(topic.id), :method=> 'delete' %>
             <%end%>
+        <%end%>
     </li>
 <% end %>
 

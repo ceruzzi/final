@@ -10,6 +10,7 @@ Topic.delete_all
 Comment.delete_all
 Subforum.delete_all
 
+User.create username: 'Admin', password: 'alkaseltzer'
 User.create username: 'Michael', password: 'michael'
 User.create username: 'WSFan', password: 'michael'
 
@@ -39,3 +40,12 @@ Comment.create topic_id: 5, user:'WSFan', post_number: 1, content: 'You dont say
 
 Topic.create subforum_id: 5, title: 'Giordanos or Lou Malnatis?', user: 'Michael', content: 'I say Giordanos'
 Comment.create topic_id: 6, user:'WSFan', post_number: 1, content: 'Lou Malnatis'
+
+Tag.create title: 'happy'
+Tag.create title: 'sad'
+Tag.create title: 'mad'
+
+Connector.create topic_id: 1, tag_id: 2
+Connector.create topic_id: 2, tag_id: 3
+Connector.create topic_id: 6, tag_id: 1
+Connector.create topic_id: 1, tag_id: 3
