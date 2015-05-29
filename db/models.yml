@@ -38,8 +38,6 @@
 User
   username: string
   password_digest: string
-#  age: int
-#  avatar_url: string
 
 Topic
   title: string
@@ -58,6 +56,10 @@ Subforum
 
 Tag
   title: string
+
+Connector
+   topic_id: integer
+   tag_id: integer
 
 
 

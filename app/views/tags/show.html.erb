@@ -1,69 +1,9 @@
-<style>
-    h2 {
-        color: white;
-        background: #006;
-        padding: 6px;
-        text-align: center;
-    }
-    img {
-        float: left;
-        margin-right: 40px;
-        box-shadow: 8px 8px 4px gray;
-        height: "200px";
-    }
-    p {
-        margin-top: 24px;
-        margin-bottom: 24px;
-    }
-</style>
-<%= link_to "Go Back", subforum_url(@topic.subforum_id)%>
+<h2><%= @tag.title %></h2>
 
 
-<h2><%= @topic.title %></h2>
+<ul>
 
-
-<div>
-    <p><hr><br><b><i>User: <%= @topic.user%></i></b>
-    <br>
-    <br>
-    &nbsp&nbsp&nbsp&nbsp&nbsp<%= @topic.content %>
-    </p>
-
-    <p>
-        <% if session["user_id"].present?%>
-            <%if User.find_by(id: session["user_id"]).username == @topic.user%>
-        <%= link_to "Edit", edit_url(@topic.id) %>
-                <% end %>
-        <% end %>
-
-    </p>
-
-
-    <p></p>
-
-
-
-
-    <% Comment.where(topic_id: @topic.id).each do |comment| %>
-        <p><hr><br><b><i>User: <%= comment.user%></i></b>
-        <br>
-        <br>
-        &nbsp&nbsp&nbsp&nbsp&nbsp<%= comment.content %>
-        <p><% if session["user_id"].present?%>
-            <%if User.find_by(id: session["user_id"]).username == comment.user%>
-                <%= link_to "Edit", edit_comment_url(comment.id) %>
-                    </p>
-            <% end %>
-        <% end %>
-        </p>
-        </div>
-    <% end%>
-    <% if session["user_id"].present?%>
-    <h3>Reply:</h3>
-    <%=form_tag comments_url(@topic.id) do%>
-        <p>Content:<br> <textarea name="content" rows="5"cols="100"></textarea></p>
-        <p><input type="submit" value="Send"></p>
-    </form>
-    <% end%>
-    <% end%>
-
+    <% @tag.topics.each do |t| %>
+        <li><%=link_to t.title, topic_url(t.id), :method=> 'get' %></li>
+    <%end%>
+</ul>

@@ -1,7 +1,7 @@
 class TagsController < ApplicationController
 
   def index
-    @tags = Tag.all
+    @tags = Tag.all.limit(1000)
   end
 
   def show
@@ -9,8 +9,7 @@ class TagsController < ApplicationController
   end
 
   def create
-   Tag.create title: params[:title]
-
-    redirect_to root_path
+   Tag.create title: params[:title] #will only happen if doesnt exist already
+   @tag = Tag.find(params[:title])
   end
 end

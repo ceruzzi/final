@@ -1,7 +1,7 @@
 class SubforumsController < ApplicationController
 
   def index
-    @subforums = Subforum.all
+    @subforums = Subforum.all.limit(1000)
   end
 
   def show

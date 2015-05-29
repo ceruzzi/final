@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 0) do
 
   add_index "comments", ["topic_id"], name: "index_comments_on_topic_id"
 
+  create_table "connectors", force: :cascade do |t|
+    t.integer "topic_id"
+    t.integer "tag_id"
+  end
+
+  add_index "connectors", ["tag_id"], name: "index_connectors_on_tag_id"
+  add_index "connectors", ["topic_id"], name: "index_connectors_on_topic_id"
+
   create_table "subforums", force: :cascade do |t|
     t.string "title"
   end

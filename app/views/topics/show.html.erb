@@ -1,25 +1,10 @@
-<style>
-    h2 {
-        color: white;
-        background: #006;
-        padding: 6px;
-        text-align: center;
-    }
-    img {
-        float: left;
-        margin-right: 40px;
-        box-shadow: 8px 8px 4px gray;
-        height: "200px";
-    }
-    p {
-        margin-top: 24px;
-        margin-bottom: 24px;
-    }
-</style>
 <%= link_to "Go Back", subforum_url(@topic.subforum_id)%>
 
 
 <h2><%= @topic.title %></h2>
+<% @topic.tags.each do |t| %>
+    <%=link_to t.title, tag_url(t.id) %>,
+<%end%>
 
 
 <div>
@@ -37,11 +22,6 @@
         <% end %>
 
     </p>
-
-
-    <p></p>
-
-
 
 
     <% Comment.where(topic_id: @topic.id).each do |comment| %>
@@ -65,5 +45,12 @@
         <p><input type="submit" value="Send"></p>
     </form>
     <% end%>
-    <% end%>
+
+        <h3>Tag this thread:</h3>
+        <%=form_tag connectors_url(@topic.id) do%>
+            <p><label>Tag:</label> <input name="title" size="30"></p>
+            <p><button>Submit</button></p>
+        <% end %>
+
+<% end%>
 

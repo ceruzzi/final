@@ -10,7 +10,7 @@
 
 <div class = "pull-right">
     <h1><%= link_to "White Sox Forum", "/" %>
-   <% Subforum.all.each do |subforum| %>
+   <% Subforum.all.limit(20).each do |subforum| %>
             <small>  <%= link_to subforum.title, subforum_url(subforum.id), :method=> 'get' %></small>
            <% end %></h1>
     <% if session["user_id"].present?%>

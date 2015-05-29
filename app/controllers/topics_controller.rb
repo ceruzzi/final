@@ -1,24 +1,17 @@
 class TopicsController < ApplicationController
 
   def index
-    @topics = Topic.all
+    @topics = Topic.all.limit(1000)
   end
 
   def show
     @topic = Topic.find(params[:id])
-    #@comments=Comment.where(:post_number=>params["id"])
   end
 
   def new
   end
 
   def create
-    # Topic.create title: params[:title],
-    #     subforum_id: params[:subforum_id],
-    #     content: params[:content]
-    #
-    # redirect_to topic_url(com.topic_id)
-
     top=Topic.new
     top.subforum_id = params["subforum_id"]
     top.content=params["content"]

@@ -16,7 +16,6 @@ Rails.application.routes.draw do
   get '/topics/:id/edit' => 'topics#edit',:as=>'edit'
   patch '/topics/:id' => 'topics#update'
 
-
   post '/comments/:topic_id'=>'comments#create', :as=>'comments'
   get '/comments/:id/edit' => 'comments#edit',:as=>'edit_comment'
   patch '/comments/:id' => 'comments#update'
@@ -31,4 +30,7 @@ Rails.application.routes.draw do
   get '/login'=> 'sessions#new'
   post '/sessions'=> 'sessions#create'
   get '/logout'=> 'sessions#destroy'
+
+  get '/connectors/new' => 'connectors#new'
+  post '/connectors/:topic_id'=>'connectors#create', :as=> 'connectors'
 end
