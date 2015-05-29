@@ -23172,3 +23172,203 @@ Processing by TopicsController#edit as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
 Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.5ms)
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "users" ADD "username" varchar
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "topics" ADD "title" varchar[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "topics" ADD "user" varchar
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "topics" ADD "subforum_id" int[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_topics_on_subforum_id" ON "topics" ("subforum_id")[0m
+  [1m[35m (1.2ms)[0m  ALTER TABLE "topics" ADD "content" text
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  ALTER TABLE "comments" ADD "topic_id" integer
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_comments_on_topic_id" ON "comments" ("topic_id")[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "comments" ADD "user" varchar
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "comments" ADD "post_number" integer[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "comments" ADD "content" text
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "subforums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "subforums" ADD "title" varchar
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "tags" ADD "title" varchar
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "connectors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "connectors" ADD "topic_id" integer
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_connectors_on_topic_id" ON "connectors" ("topic_id")[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "connectors" ADD "tag_id" integer
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_connectors_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_connectors_on_topic_id' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX "index_connectors_on_tag_id" ON "connectors" ("tag_id")
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_connectors_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_connectors_on_tag_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_connectors_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_connectors_on_topic_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_connectors_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_connectors_on_tag_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_connectors_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_connectors_on_topic_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_subforum_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "topics"[0m
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "comments"
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "subforums"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Admin' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "password_digest") VALUES (?, ?)  [["username", "Admin"], ["password_digest", "$2a$10$OriD0VhklynkscAmADsHtuVSa6Q/ot9JcK.vZBTWdxnVlzcnnd912"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'Michael' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest") VALUES (?, ?)  [["username", "Michael"], ["password_digest", "$2a$10$hUWMbEmukuBivGDxymqUGeVDcvyPhw.MJQWK5jXnswS90S/6nvgpy"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'WSFan' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password_digest") VALUES (?, ?)  [["username", "WSFan"], ["password_digest", "$2a$10$ITSdhih5Rtc15pk3oElheOOxEFyrLkz09tuwxcTkuXBal9xp.Y4du"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSubforum Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "subforums" WHERE "subforums"."title" = 'On The Field' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "subforums" ("title") VALUES (?)  [["title", "On The Field"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSubforum Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "subforums" WHERE "subforums"."title" = 'Trade Rumors, Prospect Talk, Etc.' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "subforums" ("title") VALUES (?)  [["title", "Trade Rumors, Prospect Talk, Etc."]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSubforum Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "subforums" WHERE "subforums"."title" = 'White Sox History' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "subforums" ("title") VALUES (?)  [["title", "White Sox History"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSubforum Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "subforums" WHERE "subforums"."title" = 'Other Teams' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "subforums" ("title") VALUES (?)  [["title", "Other Teams"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSubforum Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "subforums" WHERE "subforums"."title" = 'Off Topic' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "subforums" ("title") VALUES (?)  [["title", "Off Topic"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.3ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "topics" ("subforum_id", "title", "user", "content") VALUES (?, ?, ?, ?)[0m  [["subforum_id", 1], ["title", "Tonights game"], ["user", "Michael"], ["content", "Why on earth did we start Noesi tonight?"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)  [["topic_id", 1], ["user", "WSFan"], ["post_number", 1], ["content", "He is terrible"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "topics" ("subforum_id", "title", "user", "content") VALUES (?, ?, ?, ?)[0m  [["subforum_id", 1], ["title", "Tyler Flowers"], ["user", "Michael"], ["content", "He is terrible"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)  [["topic_id", 2], ["user", "WSFan"], ["post_number", 1], ["content", "So is Soto"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)[0m  [["topic_id", 2], ["user", "Michael"], ["post_number", 2], ["content", "This team needs a new catcher"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("subforum_id", "title", "user", "content") VALUES (?, ?, ?, ?)  [["subforum_id", 2], ["title", "Micah Johnson performing well in AAA"], ["user", "Michael"], ["content", "He will be a solid 2nd baseman someday"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)[0m  [["topic_id", 3], ["user", "WSFan"], ["post_number", 1], ["content", "He needs a bit more time to develop his defense"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("subforum_id", "title", "user", "content") VALUES (?, ?, ?, ?)  [["subforum_id", 3], ["title", "Who was the best White Sox player of all time?"], ["user", "Michael"], ["content", "Was it Frank Thomas?"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)[0m  [["topic_id", 4], ["user", "WSFan"], ["post_number", 1], ["content", "It was Eddie Collins"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("subforum_id", "title", "user", "content") VALUES (?, ?, ?, ?)  [["subforum_id", 4], ["title", "Bryce Harper"], ["user", "Michael"], ["content", "Is pretty good at this baseball thing."]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)[0m  [["topic_id", 5], ["user", "WSFan"], ["post_number", 1], ["content", "You dont say"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("subforum_id", "title", "user", "content") VALUES (?, ?, ?, ?)  [["subforum_id", 5], ["title", "Giordanos or Lou Malnatis?"], ["user", "Michael"], ["content", "I say Giordanos"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("topic_id", "user", "post_number", "content") VALUES (?, ?, ?, ?)[0m  [["topic_id", 6], ["user", "WSFan"], ["post_number", 1], ["content", "Lou Malnatis"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mTag Exists (0.6ms)[0m  SELECT  1 AS one FROM "tags" WHERE "tags"."title" = 'happy' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("title") VALUES (?)[0m  [["title", "happy"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" WHERE "tags"."title" = 'sad' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("title") VALUES (?)[0m  [["title", "sad"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mTag Exists (0.1ms)[0m  SELECT  1 AS one FROM "tags" WHERE "tags"."title" = 'mad' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("title") VALUES (?)[0m  [["title", "mad"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "connectors" ("topic_id", "tag_id") VALUES (?, ?)  [["topic_id", 1], ["tag_id", 2]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "connectors" ("topic_id", "tag_id") VALUES (?, ?)[0m  [["topic_id", 2], ["tag_id", 3]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "connectors" ("topic_id", "tag_id") VALUES (?, ?)  [["topic_id", 6], ["tag_id", 1]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "connectors" ("topic_id", "tag_id") VALUES (?, ?)[0m  [["topic_id", 1], ["tag_id", 3]]
+  [1m[35m (0.9ms)[0m  commit transaction
